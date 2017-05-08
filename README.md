@@ -1,3 +1,6 @@
+# README
+
+
 # gohub
 #### Where you can renting out and rent different types of gears
 
@@ -26,4 +29,29 @@ git pull gohub develop
 ```
 6. Then checkout to a new branch 
 7. Push code to the origin and create pull request from the origin
- 
+
+
+
+
+#### This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
