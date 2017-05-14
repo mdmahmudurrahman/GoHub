@@ -19,13 +19,14 @@ gem "bcrypt", "~> 3.1.7"
 gem "bootstrap-sass"
 gem "autoprefixer-rails"
 gem "jquery-rails"
-gem "devise"
 gem "config"
+gem "devise", github: "plataformatec/devise"
 gem "cancancan"
 gem "jquery-ui-rails"
 gem "omniauth"
 gem "omniauth-facebook"
 gem "omniauth-google-oauth2"
+gem "font-awesome-rails"
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
