@@ -198,7 +198,17 @@
   }
 
   input#register-submit {
-    width: 50%;
-    margin-left: 25%;
+    width: 94%;
+    margin-left: 3%;
+  }
+
+  .third-party-login {
+    .fb-provider {
+      width: 100%;
+    }
+
+    .google-provider {
+      width: 100%;
+    }
   }
 }
