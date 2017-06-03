@@ -50,6 +50,18 @@
                     </div>
                   </div>
               <% end -%>
+              <div class="form-group">
+                <div class="third-party-login row">
+                  <div class="col-md-6 form-group">
+                    <%= link_to "login with Facebook", user_facebook_omniauth_authorize_path,
+                      class: "btn btn-primary btn-lg fb-provider " %>
+                  </div>
+                  <div class="col-md-6 form-group">
+                    <%= link_to "login with Google", user_google_oauth2_omniauth_authorize_path,
+                      class: "btn btn-danger btn-lg google-provider " %>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
