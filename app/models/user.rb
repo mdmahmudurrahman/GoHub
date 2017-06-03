@@ -35,7 +35,7 @@ class User < ApplicationRecord
           user.save
         end
       end
-      return user
+      user
     end
 
     def new_with_session(params, session)
