@@ -27,12 +27,14 @@ Rails.application.configure do
   end
 
   config.action_mailer.default_url_options = {host: "localhost:3000"}
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default :charset => "utf-8"
   config.action_mailer.smtp_settings = {
     address: "smtp.gmail.com",
     port: 587,
-    domain: ENV["gohub_domain"],
-    user_name: ENV["gohub_user_name"],
-    password: ENV["gohub_pass"],
+    domain: ENV["GOHUB_DOMAIN"],
+    user_name: ENV["GOHUB_USER_NAME"],
+    password: ENV["GOHUB_PASS"],
     authentication: "plain",
     enable_starttls_auto: true
   }
