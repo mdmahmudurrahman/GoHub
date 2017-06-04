@@ -1,0 +1,23 @@
+en:
+  header:
+    gohub: "Gohub"
+    signup: "Sign Up"
+    login: "Log In"
+    lessor: "Become a lessor"
+    help: "Help"
+  slider:
+    infinite_possibilities: "Infinite possibilities"
+    how_does_gohub_works: "How does gohub works"
+    like_to_ride: "Where would you like to ride?"
+    pickup: "Pick up"
+    drop_off: "Drop off"
+
+  registration:
+    sign_up_with_fb: "Signup with Facebook"
+    sign_up_with_gog: "Signup with Google"
+    register: "Register"
+    signup: "Sign Up"
+  login:
+    login_with_fb: "Signup with Facebook"
+    login_with_gog: "Signup with Google"
+    login: "Log In"
