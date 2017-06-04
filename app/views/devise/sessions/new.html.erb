@@ -53,11 +53,11 @@
               <div class="form-group">
                 <div class="third-party-login row">
                   <div class="col-md-6 form-group">
-                    <%= link_to "login with Facebook", user_facebook_omniauth_authorize_path,
+                    <%= link_to t("login.login_with_fb"), user_facebook_omniauth_authorize_path,
                       class: "btn btn-primary btn-lg fb-provider " %>
                   </div>
                   <div class="col-md-6 form-group">
-                    <%= link_to "login with Google", user_google_oauth2_omniauth_authorize_path,
+                    <%= link_to t("login.login_with_gog"), user_google_oauth2_omniauth_authorize_path,
                       class: "btn btn-danger btn-lg google-provider " %>
                   </div>
                 </div>
