@@ -6,9 +6,12 @@ class User < ApplicationRecord
   has_many :orders
   has_many :wish_lists
 
-  devise :database_authenticatable, :registerable, :omniauthable, :recoverable,
-    :rememberable, :trackable, :validatable, :confirmable, :lockable,
-    omniauth_providers: [:facebook, :google_oauth2]
+  devise :database_authenticatable, :registerable, :omniauthable,
+    :recoverable, :rememberable, :trackable, :validatable,
+    :confirmable, :lockable, omniauth_providers: [:facebook,
+    :google_oauth2]
+
+  enum business_type: [:community, :corporate]
 
   class << self
     def from_omniauth(auth, signed_in_resource = nil)
