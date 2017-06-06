@@ -31,6 +31,21 @@
                       class: "form-control", placeholder:"Confirm password", autocomplete: "off" %>
                   </div>
 
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-md-6 form-group">
+                        <%= f.radio_button :business_type,
+                          User.business_types[:community], checked: true %>
+                        <%= f.label "Community" %>
+                      </div>
+                      <div class="col-md-6 form-group">
+                        <%= f.radio_button :business_type,
+                          User.business_types[:corporate] %>
+                        <%= f.label "Corporate" %>
+                      </div>
+                    </div>
+                  </div>
+
                   <div class="actions form-group">
                     <div class="row">
                       <%= f.submit "Sign up", id: "register-submit", tabindex: "4",

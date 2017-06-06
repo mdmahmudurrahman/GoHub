@@ -19,6 +19,7 @@ class CreateUsers < ActiveRecord::Migration[5.1]
       t.boolean :vat_id_number_verified
       t.boolean :send_newsletter
       t.integer :rating
+      t.integer :business_type
 
       t.timestamps
     end
