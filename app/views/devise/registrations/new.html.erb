@@ -34,14 +34,9 @@
                   <div class="form-group">
                     <div class="row">
                       <div class="col-md-6 form-group">
-                        <%= f.radio_button :business_type,
-                          User.business_types[:community], checked: true %>
+                        <%= f.radio_button :test_at_me,
+                          "Sylhet", checked: true %>
                         <%= f.label "Community" %>
-                      </div>
-                      <div class="col-md-6 form-group">
-                        <%= f.radio_button :business_type,
-                          User.business_types[:corporate] %>
-                        <%= f.label "Corporate" %>
                       </div>
                     </div>
                   </div>

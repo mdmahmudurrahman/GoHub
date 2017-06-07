@@ -11,6 +11,11 @@ class User < ApplicationRecord
     :confirmable, :lockable, omniauth_providers: [:facebook,
     :google_oauth2]
 
+  before_save :test_tt
+
+  def test_tt
+    binding.pry
+  end
   enum business_type: [:community, :corporate]
 
   class << self

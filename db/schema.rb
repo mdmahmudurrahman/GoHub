@@ -187,7 +187,7 @@ ActiveRecord::Schema.define(version: 20170601015508) do
     t.boolean "vat_id_number_verified"
     t.boolean "send_newsletter"
     t.integer "rating"
-    t.integer "business_type"
+    t.string "test_at_me"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", default: "", null: false
