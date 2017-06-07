@@ -20,15 +20,13 @@ gem "bootstrap-sass"
 gem "autoprefixer-rails"
 gem "jquery-rails"
 gem "config"
-gem "devise", github: "plataformatec/devise"
+gem "devise", "~> 4.3"
 gem "cancancan"
 gem "jquery-ui-rails"
 gem "omniauth"
 gem "omniauth-facebook"
 gem "omniauth-google-oauth2"
 gem "font-awesome-rails"
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

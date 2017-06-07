@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {omniauth_callbacks: "users/omniauth_callbacks" }
+  devise_for :users, controllers: {
+    registrations: "registrations",
+    omniauth_callbacks: "users/omniauth_callbacks"
+  }
 
   scope "(:locale)", locale: /en|da/ do
     root "static_pages#search_gear"
