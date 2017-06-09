@@ -9,5 +9,9 @@ Rails.application.routes.draw do
 
     get "about", to: "static_pages#about"
     get "contact", to: "static_pages#contact"
+
+    scope module: "company" do
+      get "company/settings", to: "static_pages#setting"
+    end
   end
 end
