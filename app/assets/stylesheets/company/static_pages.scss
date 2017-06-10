@@ -1,3 +1,21 @@
-// Place all the styles related to the company/StaticPages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.company-settings {
+  .w3-note {
+    background-color: #f5f5f5;
+    border-left: 6px solid #66ccff;
+  }
+
+  .w3-panel {
+    padding-top: 10px;
+    padding-bottom: 15px;
+  }
+
+  .w3-container, .w3-panel {
+    padding: 4% 16px;
+  }
+
+  .list-group .list-group-item {
+    min-height: 70px;
+    background-color: #e7e7e7;
+    padding-top: 4%;
+  }
+}
