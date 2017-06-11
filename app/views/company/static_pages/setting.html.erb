@@ -6,29 +6,34 @@
   <div class="col-md-6">
     <div class="list-group">
       <p>
-        <a href="#" class="list-group-item">
+        <%= link_to company_path(current_user), class: "list-group-item " do %>
           <span class="glyphicon glyphicon-cog btn btn-info btn-xs"></span>
-          Find setting your profile</a>
+          Update your profile information
+        <% end %>
+      </p>
+      <p>
+        <%= link_to "#", class: "list-group-item " do %>
+          <span class="glyphicon glyphicon-cog btn btn-info btn-xs"></span>
+          Set your shops
+        <% end %>
       </p>
       <p>
         <a href="#" class="list-group-item">
           <span class="glyphicon glyphicon-cog btn btn-info btn-xs"></span>
-          Set your shops</a>
-      </p>
-      <p>
-        <a href="#" class="list-group-item">
-          <span class="glyphicon glyphicon-user btn btn-info btn-xs"></span>
-          Update your profile information</a>
+          Find setting your profile
+        </a>
       </p>
       <p>
         <a href="#" class="list-group-item">
           <span class="glyphicon glyphicon-list-alt btn btn-info btn-xs"></span>
-          List your gear</a>
+          List your gear
+        </a>
       </p>
       <p>
         <a href="#" class="list-group-item">
           <span class="glyphicon glyphicon-dashboard btn btn-info btn-xs"></span>
-          View your dashboard</a>
+          View your dashboard
+        </a>
       </p>
     </div>
   </div>
