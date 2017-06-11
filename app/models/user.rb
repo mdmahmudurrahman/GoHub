@@ -13,6 +13,11 @@ class User < ApplicationRecord
 
   enum business_type: [:community, :corporate]
 
+  validates :name, length: {minimum: 3, maximum: 50},
+    allow_blank: true, on: :update
+
+
+
   class << self
     def from_omniauth(auth, signed_in_resource = nil)
       email = nil

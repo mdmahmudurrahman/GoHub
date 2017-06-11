@@ -252,7 +252,7 @@ Devise.setup do |config|
   # up on your models and hooks.
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
   config.omniauth :facebook, ENV["FB_APP_ID"], ENV["FB_APP_SECRET"],
-    callback_url: "https://go-hub.herokuapp.com/users/auth/facebook/callback"
+    callback_url: "http://localhost:3000/users/auth/facebook/callback"
 
   config.omniauth :google_oauth2, ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_CLIENT_SECRET"],
     {

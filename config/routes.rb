@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  namespace :company do
+    get 'users/show'
+  end
+
   devise_for :users, controllers: {
     registrations: "registrations",
     omniauth_callbacks: "users/omniauth_callbacks"
@@ -10,8 +15,10 @@ Rails.application.routes.draw do
     get "about", to: "static_pages#about"
     get "contact", to: "static_pages#contact"
 
-    scope module: "company" do
-      get "company/settings", to: "static_pages#setting"
+    namespace :company do
+      get "settings", to: "static_pages#setting"
+      get "edit/:id", to: "users#edit"
+      patch "edit/:id", to: "users#update"
     end
   end
 end
