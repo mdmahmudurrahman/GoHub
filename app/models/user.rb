@@ -5,6 +5,7 @@ class User < ApplicationRecord
   has_many :reviews
   has_many :orders
   has_many :wish_lists
+  has_many :shops
 
   devise :database_authenticatable, :registerable, :omniauthable,
     :recoverable, :rememberable, :trackable, :validatable,
