@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :employees
   namespace :company do
     get 'users/show'
   end
