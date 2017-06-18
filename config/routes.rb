@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   }
 
   scope "(:locale)", locale: /en|da/ do
-    root "static_pages#search_gear"
+    root "static_pages#home"
 
     get "about", to: "static_pages#about"
     get "contact", to: "static_pages#contact"

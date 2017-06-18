@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  def search_gear
+  def home
   end
 
   def about

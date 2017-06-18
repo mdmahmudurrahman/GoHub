@@ -25,6 +25,7 @@ h6 {
 }
 
 .intro-header {
+  margin-top: 50px;
   padding-top: 50px;
   padding-bottom: 50px;
   text-align: center;
@@ -290,3 +291,18 @@ h6 {
   padding-top: 50px;
   min-height: 400px;
 }
+
+.top-header {
+  background-color: #ffffff !important;
+}
+
+nav.navbar.navbar-default.navbar-fixed-top.topnav.top-header {
+  min-height: 100px;
+  font-weight: 100;
+  z-index: 1000;
+}
+
+.left-header {
+  padding: 0 !important;
+}
+

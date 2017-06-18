@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top topnav top-header" role="navigation">
   <div class="container topnav">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse"
@@ -8,9 +8,43 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to t("header.gohub"), root_path, class: "navbar-brand topnav" %>
+      <div class="navbar-brand topnav left-header">
+        <%= link_to image_tag("header/logo.png", alt: "GoHub", class: "logo"),
+          root_path %>
+        <div class="search-field">
+          <input name="location" id="autocomplete" class="location" placeholder="Location"
+            type="text" autocomplete="off" required="true" >
+          <input onclick="hideGearTypesDiv()" type="text" id="datefilter" name="datefilter"
+            class="date-filter" placeholder="Pick up - Drop off" value="" />
+          <span id="gear-field" class="gear-field" onclick="showHideGearTypesDiv()">Gear</span>
+          <div id="gear-types" class="gear-types">
+            <span class="gear-dropdown-icons gear-renters"> Renters</span>
+            <span class="mentors-field">
+              <button type="button" class="quantity-left-minus btn-default btn-number num-in-dec"
+                data-type="minus" data-field="">
+                <i class="material-icons md-20">remove</i>
+              </button>
+              <input type="text" id="quantity" name="quantity" class="num-renters"
+                value="1" min="1" max="999" readonly="true">
+              <button type="button" class="quantity-right-plus btn-default btn-number num-in-dec"
+                data-type="plus" data-field="">
+                <i class="material-icons md-20">add</i>
+              </button>
+            </span>
+            <div class="gear-cat">
+              <span class="pick-gear-title">Pick gear</span>
+              <div class="gear-cat-des">
+                <span class="gear-dropdown-icons bike-cat"> Bike</span>
+                <span class="gear-dropdown-icons skis-cat"> Skis</span>
+                <span class="gear-dropdown-icons snowboard-cat"> Snowboard</span>
+                <span class="gear-dropdown-icons sufrboard-cat"> Surfboard</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div class="collapse navbar-collapse right-header" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li>
           <a href="#"><%= t("header.lessor")%></a>
@@ -34,3 +68,71 @@
     </div>
   </div>
 </nav>
+
+<script type="text/javascript">
+  $(function() {
+    $('input[name="datefilter"]').daterangepicker({
+      minDate: new Date(Date.now() - 86400000),
+      dateFormat: 'MMMM D, YYYY',
+      autoUpdateInput: false,
+      locale: {
+        cancelLabel: 'Close'
+      }
+    });
+
+    var quantity=1;
+    $('.quantity-right-plus').click(function(e){
+      // Stop acting like a button
+      e.preventDefault();
+      // Get the field name
+      var quantity = parseInt($('#quantity').val());
+      // If is not undefined
+      $('#quantity').val(quantity + 1);
+      // Increment
+    });
+
+    $('.quantity-left-minus').click(function(e){
+      // Stop acting like a button
+      e.preventDefault();
+      // Get the field name
+      var quantity = parseInt($('#quantity').val());
+      // If is not undefined
+      // Increment
+      if(quantity>1){
+        $('#quantity').val(quantity - 1);
+      }
+    });
+  });
+
+  var autocomplete;
+  function initAutocomplete() {
+    autocomplete = new google.maps.places.Autocomplete((document.getElementById('autocomplete')),
+      {types: ['geocode']});
+  }
+
+  function showHideGearTypesDiv() {
+    var x = document.getElementById('gear-types');
+    if (x.style.display === 'block') {
+        x.style.display = 'none';
+    } else {
+        x.style.display = 'block';
+    }
+  }
+
+  $('html').click(function(e) {
+    var container = $("#gear-types");
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      container.hide();
+    }
+  })
+
+  $('#gear-field').click(function(e){
+    e.stopPropagation();
+  });
+
+  function hideGearTypesDiv() {
+    document.getElementById("gear-types").style.display = 'none';
+  }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBF0FPDHlurGkDKua7PfZjpD2fr2rQsRw0&libraries=places&callback=initAutocomplete" async defer></script>
