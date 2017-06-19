@@ -11,37 +11,39 @@
       <div class="navbar-brand topnav left-header">
         <%= link_to image_tag("header/logo.png", alt: "GoHub", class: "logo"),
           root_path %>
-        <div class="search-field">
-          <input name="location" id="autocomplete" class="location" placeholder="Location"
-            type="text" autocomplete="off" required="true" >
-          <input onclick="hideGearTypesDiv()" type="text" id="datefilter" name="datefilter"
-            class="date-filter" placeholder="Pick up - Drop off" value="" />
-          <span id="gear-field" class="gear-field" onclick="showHideGearTypesDiv()">Gear</span>
-          <div id="gear-types" class="gear-types">
-            <span class="gear-dropdown-icons gear-renters"> Renters</span>
-            <span class="mentors-field">
-              <button type="button" class="quantity-left-minus btn-default btn-number num-in-dec"
-                data-type="minus" data-field="">
-                <i class="material-icons md-20">remove</i>
-              </button>
-              <input type="text" id="quantity" name="quantity" class="num-renters"
-                value="1" min="1" max="999" readonly="true">
-              <button type="button" class="quantity-right-plus btn-default btn-number num-in-dec"
-                data-type="plus" data-field="">
-                <i class="material-icons md-20">add</i>
-              </button>
-            </span>
-            <div class="gear-cat">
-              <span class="pick-gear-title">Pick gear</span>
-              <div class="gear-cat-des">
-                <span class="gear-dropdown-icons bike-cat"> Bike</span>
-                <span class="gear-dropdown-icons skis-cat"> Skis</span>
-                <span class="gear-dropdown-icons snowboard-cat"> Snowboard</span>
-                <span class="gear-dropdown-icons sufrboard-cat"> Surfboard</span>
+        <% if !user_signed_in? || (user_signed_in? && current_user.user_type != 1) %>
+          <div class="search-field">
+            <input name="location" id="autocomplete" class="location" placeholder="Location"
+              type="text" autocomplete="off" required="true" >
+            <input onclick="hideGearTypesDiv()" type="text" id="datefilter" name="datefilter"
+              class="date-filter" placeholder="Pick up - Drop off" value="" />
+            <span id="gear-field" class="gear-field" onclick="showHideGearTypesDiv()">Gear</span>
+            <div id="gear-types" class="gear-types">
+              <span class="gear-dropdown-icons gear-renters"> Renters</span>
+              <span class="mentors-field">
+                <button type="button" class="quantity-left-minus btn-default btn-number num-in-dec"
+                  data-type="minus" data-field="">
+                  <i class="material-icons md-20">remove</i>
+                </button>
+                <input type="text" id="quantity" name="quantity" class="num-renters"
+                  value="1" min="1" max="999" readonly="true">
+                <button type="button" class="quantity-right-plus btn-default btn-number num-in-dec"
+                  data-type="plus" data-field="">
+                  <i class="material-icons md-20">add</i>
+                </button>
+              </span>
+              <div class="gear-cat">
+                <span class="pick-gear-title">Pick gear</span>
+                <div class="gear-cat-des">
+                  <span class="gear-dropdown-icons bike-cat"> Bike</span>
+                  <span class="gear-dropdown-icons skis-cat"> Skis</span>
+                  <span class="gear-dropdown-icons snowboard-cat"> Snowboard</span>
+                  <span class="gear-dropdown-icons sufrboard-cat"> Surfboard</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        <% end %>
       </div>
     </div>
     <div class="collapse navbar-collapse right-header" id="bs-example-navbar-collapse-1">
