@@ -9,6 +9,8 @@ class CreateShops < ActiveRecord::Migration[5.1]
       t.string :city
       t.string :country
       t.string :phone_number
+      t.decimal :latitude
+      t.decimal :longitude
       t.string :profile_picture
       t.string :cover_picture
       t.string :about
@@ -21,6 +23,7 @@ class CreateShops < ActiveRecord::Migration[5.1]
       t.time :o_h_saturday
       t.time :o_h_sunday
       t.time :o_h_holiday
+      t.decimal :average_rating
 
       t.timestamps
     end
