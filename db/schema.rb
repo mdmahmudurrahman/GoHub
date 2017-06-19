@@ -10,52 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170601015508) do
+ActiveRecord::Schema.define(version: 20170619033704) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "category_bikes", force: :cascade do |t|
-    t.string "name"
-    t.decimal "frame_size"
-    t.decimal "user_height"
-    t.string "ext_accessory"
+  create_table "attribute_values", force: :cascade do |t|
+    t.bigint "attribute_id"
+    t.bigint "gear_id"
+    t.string "value"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["attribute_id"], name: "index_attribute_values_on_attribute_id"
+    t.index ["gear_id"], name: "index_attribute_values_on_gear_id"
   end
 
-  create_table "category_skis", force: :cascade do |t|
+  create_table "attributes", force: :cascade do |t|
+    t.bigint "category_id"
     t.string "name"
-    t.decimal "ski_length"
-    t.decimal "user_height"
-    t.boolean "size_two_x_two"
-    t.boolean "side_two_x_four"
-    t.boolean "three_d"
-    t.boolean "chanel"
-    t.string "ext_accessory"
+    t.integer "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_attributes_on_category_id"
   end
 
-  create_table "category_snowboards", force: :cascade do |t|
+  create_table "categories", force: :cascade do |t|
     t.string "name"
-    t.decimal "snowboard_size"
-    t.decimal "user_height"
-    t.boolean "alpine"
-    t.boolean "cross_country"
-    t.boolean "non_release"
-    t.boolean "randonnee"
-    t.boolean "telemark"
-    t.string "ext_accessory"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "category_surfboards", force: :cascade do |t|
-    t.string "name"
-    t.decimal "surfboard_size"
-    t.decimal "user_height"
-    t.string "ext_accessory"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -82,22 +62,24 @@ ActiveRecord::Schema.define(version: 20170601015508) do
 
   create_table "gears", force: :cascade do |t|
     t.bigint "shop_id"
-    t.integer "target_category_id"
-    t.integer "target_category_type"
+    t.bigint "category_id"
     t.string "picture"
     t.string "title"
     t.text "description"
     t.integer "amount"
-    t.string "delivery"
+    t.boolean "deliverable"
+    t.decimal "delivery_price"
     t.string "currency"
     t.decimal "price_per_day"
     t.decimal "price_per_hour"
     t.decimal "price_per_week"
-    t.decimal "delivery_price"
     t.integer "status"
-    t.decimal "rating"
+    t.boolean "instant_booking"
+    t.decimal "total_quantity"
+    t.decimal "free_quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["category_id"], name: "index_gears_on_category_id"
     t.index ["shop_id"], name: "index_gears_on_shop_id"
   end
 
@@ -106,7 +88,8 @@ ActiveRecord::Schema.define(version: 20170601015508) do
     t.bigint "order_id"
     t.time "start_time"
     t.time "end_time"
-    t.decimal "total_price"
+    t.decimal "price_amount"
+    t.decimal "service_fee"
     t.integer "status"
     t.date "booking_date"
     t.datetime "created_at", null: false
@@ -119,9 +102,8 @@ ActiveRecord::Schema.define(version: 20170601015508) do
     t.bigint "user_id"
     t.string "invoice_number"
     t.string "receipt_number"
-    t.integer "gear_rent"
-    t.decimal "service_fee"
-    t.decimal "total_price"
+    t.decimal "total_service_fee"
+    t.decimal "total_price_amount"
     t.decimal "gohub_fee"
     t.datetime "payment_date"
     t.string "transaction_id"
@@ -133,12 +115,12 @@ ActiveRecord::Schema.define(version: 20170601015508) do
 
   create_table "reviews", force: :cascade do |t|
     t.bigint "user_id"
-    t.bigint "gear_id"
+    t.integer "target_id"
+    t.integer "target_type"
     t.decimal "rating"
     t.text "text_message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["gear_id"], name: "index_reviews_on_gear_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
   end
 
@@ -151,6 +133,8 @@ ActiveRecord::Schema.define(version: 20170601015508) do
     t.string "city"
     t.string "country"
     t.string "phone_number"
+    t.decimal "latitude"
+    t.decimal "longitude"
     t.string "profile_picture"
     t.string "cover_picture"
     t.string "about"
@@ -163,6 +147,7 @@ ActiveRecord::Schema.define(version: 20170601015508) do
     t.time "o_h_saturday"
     t.time "o_h_sunday"
     t.time "o_h_holiday"
+    t.decimal "average_rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_shops_on_user_id"
@@ -179,6 +164,8 @@ ActiveRecord::Schema.define(version: 20170601015508) do
     t.string "city"
     t.string "country"
     t.string "phone_number"
+    t.decimal "latitude"
+    t.decimal "longitude"
     t.string "vat_id_number"
     t.string "profile_picture"
     t.string "cover_picture"
@@ -186,7 +173,7 @@ ActiveRecord::Schema.define(version: 20170601015508) do
     t.boolean "phone_verified"
     t.boolean "vat_id_number_verified"
     t.boolean "send_newsletter"
-    t.integer "rating"
+    t.integer "average_rating"
     t.integer "user_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -223,14 +210,17 @@ ActiveRecord::Schema.define(version: 20170601015508) do
     t.index ["user_id"], name: "index_wish_lists_on_user_id"
   end
 
+  add_foreign_key "attribute_values", "attributes"
+  add_foreign_key "attribute_values", "gears"
+  add_foreign_key "attributes", "categories"
   add_foreign_key "chat_messages", "chat_rooms"
   add_foreign_key "chat_messages", "users"
   add_foreign_key "chat_rooms", "orders"
+  add_foreign_key "gears", "categories"
   add_foreign_key "gears", "shops"
   add_foreign_key "order_lists", "gears"
   add_foreign_key "order_lists", "orders"
   add_foreign_key "orders", "users"
-  add_foreign_key "reviews", "gears"
   add_foreign_key "reviews", "users"
   add_foreign_key "shops", "users"
   add_foreign_key "wish_lists", "gears"

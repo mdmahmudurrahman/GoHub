@@ -5,7 +5,8 @@ class CreateOrderLists < ActiveRecord::Migration[5.1]
       t.references :order, foreign_key: true
       t.time :start_time
       t.time :end_time
-      t.decimal :total_price
+      t.decimal :price_amount
+      t.decimal :service_fee
       t.integer :status
       t.date :booking_date
 

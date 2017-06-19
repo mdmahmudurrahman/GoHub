@@ -4,9 +4,8 @@ class CreateOrders < ActiveRecord::Migration[5.1]
       t.references :user, foreign_key: true
       t.string :invoice_number
       t.string :receipt_number
-      t.integer :gear_rent
-      t.decimal :service_fee
-      t.decimal :total_price
+      t.decimal :total_service_fee
+      t.decimal :total_price_amount
       t.decimal :gohub_fee
       t.datetime :payment_date
       t.string :transaction_id
