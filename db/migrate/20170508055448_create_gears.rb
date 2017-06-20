@@ -6,7 +6,6 @@ class CreateGears < ActiveRecord::Migration[5.1]
       t.string :picture
       t.string :title
       t.text :description
-      t.integer :amount
       t.boolean :deliverable
       t.decimal :delivery_price
       t.string :currency
