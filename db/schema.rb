@@ -75,8 +75,8 @@ ActiveRecord::Schema.define(version: 20170619033704) do
     t.decimal "price_per_week"
     t.integer "status"
     t.boolean "instant_booking"
-    t.decimal "total_quantity"
-    t.decimal "free_quantity"
+    t.integer "total_quantity"
+    t.integer "free_quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_gears_on_category_id"
@@ -173,7 +173,7 @@ ActiveRecord::Schema.define(version: 20170619033704) do
     t.boolean "phone_verified"
     t.boolean "vat_id_number_verified"
     t.boolean "send_newsletter"
-    t.integer "average_rating"
+    t.decimal "average_rating"
     t.integer "user_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
