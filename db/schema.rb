@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20170619033704) do
   create_table "attributes", force: :cascade do |t|
     t.bigint "category_id"
     t.string "name"
-    t.integer "type"
+    t.integer "attrib_type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_attributes_on_category_id"
@@ -66,7 +66,6 @@ ActiveRecord::Schema.define(version: 20170619033704) do
     t.string "picture"
     t.string "title"
     t.text "description"
-    t.integer "amount"
     t.boolean "deliverable"
     t.decimal "delivery_price"
     t.string "currency"
