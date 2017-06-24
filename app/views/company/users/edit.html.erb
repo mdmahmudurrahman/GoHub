@@ -12,7 +12,9 @@
   <div>
     <%= form_for current_user, url: company_path(current_user), html: {
       class: "col-md-6"} do |u| %>
-      <div id="company-information-form">
+      <%= render "shared/error_messages", object: u.object %>
+
+        <div id="company-information-form">
         <div class="form-group row">
           <%= u.label :company_name, class:"col-sm-4 col-form-label" %>
           <div class="col-sm-8">

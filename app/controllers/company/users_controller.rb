@@ -7,7 +7,6 @@ class Company::UsersController < ApplicationController
       redirect_to new_company_shop_path
       flash[:success] = "Company information updated"
     else
-      flash[:danger] = "Company information not updated"
       render :edit
     end
   end
