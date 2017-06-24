@@ -36,4 +36,16 @@
       border-radius: 38%;
     }
   }
+
+  #error_explanation {
+    color: red;
+    ul {
+      color: red;
+      margin: 0 0 30px 0;
+    }
+
+    li {
+      list-style: none;
+    }
+  }
 }

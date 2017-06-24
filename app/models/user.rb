@@ -1,5 +1,4 @@
 class User < ApplicationRecord
-
   has_many :chat_rooms
   has_many :chat_messages
   has_many :reviews
@@ -15,9 +14,21 @@ class User < ApplicationRecord
   enum business_type: [:community, :corporate]
 
   validates :name, length: {minimum: 3, maximum: 50},
-    allow_blank: true, on: :update
-
-
+    allow_blank: false, on: :update
+  validates :address_line_1, length: {minimum: 10, maximum: 50},
+    allow_blank: false, on: :update
+  validates :address_line_2, length: {minimum: 10, maximum: 50},
+    allow_blank: false, on: :update
+  validates :zipcode, length: {minimum: 3, maximum: 20},
+    allow_blank: false, on: :update
+  validates :city, length: {minimum: 3, maximum: 50},
+    allow_blank: false, on: :update
+  validates :country, length: {minimum: 3, maximum: 50},
+    allow_blank: false, on: :update
+  validates :phone_number, length: {minimum: 3, maximum: 50},
+    allow_blank: false, on: :update
+  validates :vat_id_number, length: {minimum: 3, maximum: 50},
+    allow_blank: false, on: :update
 
   class << self
     def from_omniauth(auth, signed_in_resource = nil)
