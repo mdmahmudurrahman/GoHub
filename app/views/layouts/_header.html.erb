@@ -17,7 +17,7 @@
               type="text" autocomplete="off" required="true" >
             <input onclick="hideGearTypesDiv()" type="text" id="datefilter" name="datefilter"
               class="date-filter" placeholder="Pick up - Drop off" value="" />
-            <span id="gear-field" class="gear-field" onclick="showHideGearTypesDiv()">Gear</span>
+            <div id="gear-field" class="gear-field" onclick="showHideGearTypesDiv()">Gear</div>
             <div id="gear-types" class="gear-types">
               <span class="gear-dropdown-icons gear-renters"> Renters</span>
               <span class="mentors-field">
@@ -43,6 +43,15 @@
               </div>
             </div>
           </div>
+          <% if request.path.split('/').last == "gears" %>
+              <script type="text/javascript">
+                var d = document.getElementById("gear-field");
+                d.innerText = "Bike + 2";
+                d.style.backgroundImage = "url(<%= asset_path('header/bike_cat.png') %>)";
+                d.style.backgroundSize = "40px";
+                d.style.paddingLeft = "44px";
+              </script>
+            <% end %>
         <% end %>
       </div>
     </div>
@@ -137,4 +146,4 @@
     document.getElementById("gear-types").style.display = 'none';
   }
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBF0FPDHlurGkDKua7PfZjpD2fr2rQsRw0&libraries=places&callback=initAutocomplete" async defer></script>
+
