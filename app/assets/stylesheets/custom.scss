@@ -83,7 +83,7 @@ ul.ui-autocomplete {
   outline: 0;
   padding: 8px;
   padding-left: 30px;
-  width: 280px;
+  width: 216px;
   font-size: 16px;
   background-image: url("header/date_range.png");
   background-repeat: no-repeat;
@@ -101,8 +101,10 @@ ul.ui-autocomplete {
   background-position: left center;
   background-size: 20px;
   padding: 8px;
-  padding-bottom: 9px;
   padding-left: 30px;
+  float: right;
+  margin-left: 5px;
+  width: 182px;
 }
 
 .gear-types {
@@ -113,7 +115,7 @@ ul.ui-autocomplete {
   display: none;
   position: absolute;
   border: 2px solid #eeeeee;
-  margin-left: 325px;
+  margin-left: 364px;
   font-weight: 500;
   font-size: 20px;
 }
