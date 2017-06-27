@@ -1,7 +1,12 @@
 <div class="featured-ride-providers">
   <div class="container">
-    <div class="col-md-8 gears-display-padding">
-      <div class="col-md-6 wow fadeInDown gear-display-padding">
+
+  <div class="gears-display-top-div">
+    <span id="map-show-btn" class="map-show-btn" onclick="showMapDiv()">Map</span>
+  </div>
+
+    <div id="gears-display" class="col-md-8 gears-display-no-padding">
+      <div class="col-md-6 wow fadeInDown gear-display-no-padding">
         <%= image_tag("home_page/cycle_p_1.png", class: "img-responsive") %>
         <div class="gear-details">
           <span class="gear-title">$22 LITU Sport TT Racing Bike</span>
@@ -17,7 +22,7 @@
         <span class="gear-reviews">53 Reviews</span>
       </div>
 
-      <div class="col-md-6 wow fadeInDown gear-display-padding">
+      <div class="col-md-6 wow fadeInDown gear-display-no-padding">
         <%= image_tag("home_page/cycle_p_2.jpg", class: "img-responsive") %>
         <div class="gear-details">
           <span class="gear-title">$22 LITU Sport TT Racing Bike</span>
@@ -33,7 +38,7 @@
         <span class="gear-reviews">53 Reviews</span>
       </div>
 
-      <div class="col-md-6 wow fadeInDown gear-display-padding">
+      <div class="col-md-6 wow fadeInDown gear-display-no-padding">
         <%= image_tag("home_page/cycle_p_1.png", class: "img-responsive") %>
         <div class="gear-details">
           <span class="gear-title">$22 LITU Sport TT Racing Bike</span>
@@ -49,7 +54,7 @@
         <span class="gear-reviews">53 Reviews</span>
       </div>
 
-      <div class="col-md-6 wow fadeInDown gear-display-padding">
+      <div class="col-md-6 wow fadeInDown gear-display-no-padding">
         <%= image_tag("home_page/cycle_p_2.jpg", class: "img-responsive") %>
         <div class="gear-details">
           <span class="gear-title">$22 LITU Sport TT Racing Bike</span>
@@ -65,7 +70,7 @@
         <span class="gear-reviews">53 Reviews</span>
       </div>
 
-      <div class="col-md-6 wow fadeInDown gear-display-padding">
+      <div class="col-md-6 wow fadeInDown gear-display-no-padding">
         <%= image_tag("home_page/cycle_p_1.png", class: "img-responsive") %>
         <div class="gear-details">
           <span class="gear-title">$22 LITU Sport TT Racing Bike</span>
@@ -81,7 +86,7 @@
         <span class="gear-reviews">53 Reviews</span>
       </div>
 
-      <div class="col-md-6 wow fadeInDown gear-display-padding">
+      <div class="col-md-6 wow fadeInDown gear-display-no-padding">
         <%= image_tag("home_page/cycle_p_2.jpg", class: "img-responsive") %>
         <div class="gear-details">
           <span class="gear-title">$22 LITU Sport TT Racing Bike</span>
@@ -97,7 +102,7 @@
         <span class="gear-reviews">53 Reviews</span>
       </div>
 
-      <div class="col-md-6 wow fadeInDown gear-display-padding">
+      <div class="col-md-6 wow fadeInDown gear-display-no-padding">
         <%= image_tag("home_page/cycle_p_2.jpg", class: "img-responsive") %>
         <div class="gear-details">
           <span class="gear-title">$22 LITU Sport TT Racing Bike</span>
@@ -113,7 +118,7 @@
         <span class="gear-reviews">53 Reviews</span>
       </div>
 
-      <div class="col-md-6 wow fadeInDown gear-display-padding">
+      <div class="col-md-6 wow fadeInDown gear-display-no-padding">
         <%= image_tag("home_page/cycle_p_2.jpg", class: "img-responsive") %>
         <div class="gear-details">
           <span class="gear-title">$22 LITU Sport TT Racing Bike</span>
@@ -129,7 +134,7 @@
         <span class="gear-reviews">53 Reviews</span>
       </div>
 
-      <div class="col-md-6 wow fadeInDown gear-display-padding">
+      <div class="col-md-6 wow fadeInDown gear-display-no-padding">
         <%= image_tag("home_page/cycle_p_1.png", class: "img-responsive") %>
         <div class="gear-details">
           <span class="gear-title">$22 LITU Sport TT Racing Bike</span>
@@ -146,9 +151,9 @@
       </div>
     </div>
 
-    <div class="col-md-4 gears-display-padding">
-      <div class="map-button-div">
-        <!-- <button id="map-close-btn" class="btn-default map-close-btn" onclick="hideMapDiv()">CLOSE</button> -->
+    <div class="col-md-4 gears-display-no-padding">
+      <div class="map-button-div" id="map-button-div">
+        <button id="map-close-btn" class="btn-default map-close-btn" onclick="hideMapDiv()">CLOSE</button>
       </div>
       <div id="dvMap" class="dv-map"></div>
     </div>
@@ -194,8 +199,19 @@
   }
 
   function hideMapDiv() {
-    var x = document.getElementById('dvMap');
-    x.style.display = 'none';
+    document.getElementById('dvMap').style.display = 'none';
+    document.getElementById('map-button-div').style.display = 'none';
+
+    document.getElementById('map-show-btn').style.display = 'block';
+    document.getElementById("gears-display").className = "col-md-12 gears-display-no-padding";
+  }
+
+  function showMapDiv() {
+    document.getElementById('dvMap').style.display = 'block';
+    document.getElementById('map-button-div').style.display = 'block';
+
+    document.getElementById('map-show-btn').style.display = 'none';
+    document.getElementById("gears-display").className = "col-md-8 gears-display-no-padding";
   }
 </script>
 
