@@ -7,12 +7,12 @@
   height: 666px;
 }
 
-.gears-display-padding {
+.gears-display-no-padding {
   padding-left: 0px !important;
   padding-right: 0px !important;
 }
 
-.gear-display-padding {
+.gear-display-no-padding {
   padding-left: 0px !important;
 }
 
@@ -47,4 +47,24 @@
   border: none;
   width: 100px;
   height: 35px;
+  background-image: url("gears/close.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px;
+}
+
+.map-show-btn {
+  z-index: 5;
+  color: #636363;
+  font-size: 16px;
+  display: none;
+  background-image: url("gears/map.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 25px;
+      padding-left: 32px;
+}
+
+.gears-display-top-div {
+  float: right;
 }
