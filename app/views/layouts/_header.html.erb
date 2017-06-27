@@ -13,42 +13,50 @@
           root_path %>
         <% if !user_signed_in? || (user_signed_in? && current_user.user_type != 1) %>
           <div class="search-field">
-            <input name="location" id="autocomplete" class="location" placeholder="Location"
-              type="text" autocomplete="off" required="true" >
-            <input onclick="hideGearTypesDiv()" type="text" id="datefilter" name="datefilter"
-              class="date-filter" placeholder="Pick up - Drop off" value="" />
-            <div id="gear-field" class="gear-field" onclick="showHideGearTypesDiv()">Gear</div>
-            <div id="gear-types" class="gear-types">
-              <span class="gear-dropdown-icons gear-renters"> Renters</span>
-              <span class="mentors-field">
-                <button type="button" class="quantity-left-minus btn-default btn-number num-in-dec"
-                  data-type="minus" data-field="">
-                  <i class="material-icons md-20">remove</i>
-                </button>
-                <input type="text" id="quantity" name="quantity" class="num-renters"
-                  value="1" min="1" max="999" readonly="true">
-                <button type="button" class="quantity-right-plus btn-default btn-number num-in-dec"
-                  data-type="plus" data-field="">
-                  <i class="material-icons md-20">add</i>
-                </button>
-              </span>
-              <div class="gear-cat">
-                <span class="pick-gear-title">Pick gear</span>
-                <div class="gear-cat-des">
-                  <span class="gear-dropdown-icons bike-cat"> Bike</span>
-                  <span class="gear-dropdown-icons skis-cat"> Skis</span>
-                  <span class="gear-dropdown-icons snowboard-cat"> Snowboard</span>
-                  <span class="gear-dropdown-icons sufrboard-cat"> Surfboard</span>
+            <%= form_tag gears_path, method: :get, :id => 'my-form' do %>
+              <input name="location" id="autocomplete" class="location" placeholder="Location"
+                type="text" autocomplete="off" required="true" value="<%=params[:location]%>" />
+              <input onclick="hideGearTypesDiv()" type="text" id="datefilter" name="datefilter"
+                class="date-filter" placeholder="Pick up - Drop off" value="<%=params[:datefilter]%>" />
+              <div id="gear-field" class="gear-field" onclick="showHideGearTypesDiv()">Gear</div>
+              <div id="gear-types" class="gear-types">
+                <span class="gear-dropdown-icons gear-renters"> Renters</span>
+                <span class="mentors-field">
+                  <button type="button" class="quantity-left-minus btn-default btn-number num-in-dec"
+                    data-type="minus" data-field="">
+                    <i class="material-icons md-20">remove</i>
+                  </button>
+                  <input type="text" id="quantity" name="quantity" class="num-renters"
+                    value="<%=params[:quantity] ? params[:quantity] : 1%>" min="1" max="999" readonly="true">
+                  <button type="button" class="quantity-right-plus btn-default btn-number num-in-dec"
+                    data-type="plus" data-field="">
+                    <i class="material-icons md-20">add</i>
+                  </button>
+                </span>
+                <div class="gear-cat">
+                  <span class="pick-gear-title">Pick gear</span>
+                  <div class="gear-cat-des">
+                    <% Category.all.each do |category|
+                      category_name = category.name %>
+                      <span class="gear-dropdown-icons <%= category_name %>-cat"
+                        onclick="submitSearchForm(<%= category.id %>)">
+                        <%= category_name %>
+                      </span>
+                    <% end %>
+                  </div>
                 </div>
               </div>
-            </div>
+              <input type="hidden" name="category" id="category" />
+              <% end %>
           </div>
-          <% if request.path.split('/').last == "gears" %>
+          <% if request.path.split('/').last == "gears"
+              category = Category.find params[:category]
+              gear_icon = "header/" + category.name + "_cat.png" %>
               <script type="text/javascript">
                 var d = document.getElementById("gear-field");
-                d.innerText = "Bike + 2";
-                d.style.backgroundImage = "url(<%= asset_path('header/bike_cat.png') %>)";
-                d.style.backgroundSize = "40px";
+                d.innerText = "<%= category.name %> + <%=params[:quantity]%>";
+                d.style.backgroundImage = "url(<%= asset_path(gear_icon) %>)";
+                d.style.backgroundSize = "36px";
                 d.style.paddingLeft = "44px";
               </script>
             <% end %>
@@ -144,6 +152,28 @@
 
   function hideGearTypesDiv() {
     document.getElementById("gear-types").style.display = 'none';
+  }
+
+  function submitSearchForm(category) {
+    var location = document.getElementById("autocomplete");
+    var datefilter = document.getElementById("datefilter");
+    var err = "";
+
+    if(location.value == "") {
+      err = "Please write location\n";
+    }
+    if(datefilter.value == "") {
+      err += "Please select date range";
+    }
+
+    if(err == "") {
+      var d = document.getElementById("category");
+      d.value = category;
+      $("#my-form").submit();
+    } else {
+      alert(err);
+    }
+
   }
 </script>
 

@@ -22,6 +22,6 @@ Rails.application.routes.draw do
       resources :shops
     end
 
-    resources :gears, only: [:index]
+    resources :gears
   end
 end
