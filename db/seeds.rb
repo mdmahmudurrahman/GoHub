@@ -154,11 +154,22 @@ Shop.new.tap do |s|
     2300 Kobenhavn, Denmark"
   s.address_line_2 = "Crowne Plaza Copenhagen Towers, orestads Boulevard 114-118,
     2300 Kobenhavn, Denmark"
-  s.zipcode = "2300", s.city = "Kobenhavn", s.country = "Denmark", s.about = about_shop
-  s.phone_number = "4588776655", s.latitude = "55.626966", s.longitude = "12.577608"
-  s.o_h_monday = "07:00", s.o_h_tuesday = "07:00", s.o_h_wednesday = "07:00"
-  s.o_h_thursday = "07:00", s.o_h_friday = "07:00", s.o_h_saturday = "08:00"
-  s.o_h_sunday = "09:00", s.o_h_holiday = "10:00", s.average_rating = 5
+  s.zipcode = "2300"
+  s.city = "Kobenhavn"
+  s.country = "Denmark"
+  s.about = about_shop
+  s.phone_number = "4588776655"
+  s.latitude = "55.626966"
+  s.longitude = "12.577608"
+  s.o_h_monday = "07:00"
+  s.o_h_tuesday = "07:00"
+  s.o_h_wednesday = "07:00"
+  s.o_h_thursday = "07:00"
+  s.o_h_friday = "07:00"
+  s.o_h_saturday = "08:00"
+  s.o_h_sunday = "09:00"
+  s.o_h_holiday = "10:00"
+  s.average_rating = 5
   s.save!
 end
 
@@ -168,11 +179,22 @@ Shop.new.tap do |s|
   s.address_line_1 = "Norrebrogade 46, 2200 Kobenhavn N, Denmark"
   s.address_line_2 = "Crowne Plaza Copenhagen Towers, Ørestads Boulevard 114-118,
     2300 København, Denmark"
-  s.zipcode = "2200", s.city = "Kobenhavn", s.country = "Denmark", s.about = about_shop
-  s.phone_number = "4535358182", s.latitude = "55.689530", s.longitude = "12.556849"
-  s.o_h_monday = "10:00", s.o_h_tuesday = "10:00", s.o_h_wednesday = "10:00"
-  s.o_h_thursday = "10:00", s.o_h_friday = "10:00", s.o_h_saturday = "08:00"
-  s.o_h_sunday = "07:00", s.o_h_holiday = "10:00", s.average_rating = 3.5
+  s.zipcode = "2200"
+  s.city = "Kobenhavn"
+  s.country = "Denmark"
+  s.about = about_shop
+  s.phone_number = "4535358182"
+  s.latitude = "55.689530"
+  s.longitude = "12.556849"
+  s.o_h_monday = "10:00"
+  s.o_h_tuesday = "10:00"
+  s.o_h_wednesday = "10:00"
+  s.o_h_thursday = "10:00"
+  s.o_h_friday = "10:00"
+  s.o_h_saturday = "08:00"
+  s.o_h_sunday = "07:00"
+  s.o_h_holiday = "10:00"
+  s.average_rating = 3.5
   s.save!
 end
 
@@ -182,11 +204,22 @@ Shop.new.tap do |s|
   s.address_line_1 = "Fabriksomradet 91, 1440 Kobenhavn K, Denmark"
   s.address_line_2 = "Crowne Plaza Copenhagen Towers, Orestads Boulevard 114-118,
     2300 Kobenhavn, Denmark"
-  s.zipcode = "2300", s.city = "Kobenhavn", s.country = "Denmark", s.about = about_shop
-  s.phone_number = "4532954520", s.latitude = "55.673637", s.longitude = "12.601293"
-  s.o_h_monday = "10:00", s.o_h_tuesday = "10:00", s.o_h_wednesday = "10:00"
-  s.o_h_thursday = "10:00", s.o_h_friday = "10:00", s.o_h_saturday = "08:00"
-  s.o_h_sunday = "07:00", s.o_h_holiday = "10:00", s.average_rating = 4.5
+  s.zipcode = "2300"
+  s.city = "Kobenhavn"
+  s.country = "Denmark"
+  s.about = about_shop
+  s.phone_number = "4532954520"
+  s.latitude = "55.673637"
+  s.longitude = "12.601293"
+  s.o_h_monday = "10:00"
+  s.o_h_tuesday = "10:00"
+  s.o_h_wednesday = "10:00"
+  s.o_h_thursday = "10:00"
+  s.o_h_friday = "10:00"
+  s.o_h_saturday = "08:00"
+  s.o_h_sunday = "07:00"
+  s.o_h_holiday = "10:00"
+  s.average_rating = 4.5
   s.save!
 end
 
@@ -196,11 +229,22 @@ Shop.new.tap do |s|
   s.name = "Velorbis"
   s.address_line_1 = "Norre Farimagsgade 63, 1364 Kobenhavn K, Denmark"
   s.address_line_2 = "Norre Farimagsgade 63, 1364 Kobenhavn K, Denmark"
-  s.zipcode = "1364", s.city = "Kobenhavn", s.country = "Denmark", s.about = about_shop
-  s.phone_number = "4538112277", s.latitude = "55.685237", s.longitude = "12.568354"
-  s.o_h_monday = "07:00", s.o_h_tuesday = "07:00", s.o_h_wednesday = "07:00"
-  s.o_h_thursday = "07:00", s.o_h_friday = "07:00", s.o_h_saturday = "08:00"
-  s.o_h_sunday = "09:00", s.o_h_holiday = "10:00", s.average_rating = 4
+  s.zipcode = "1364"
+  s.city = "Kobenhavn"
+  s.country = "Denmark"
+  s.about = about_shop
+  s.phone_number = "4538112277"
+  s.latitude = "55.685237"
+  s.longitude = "12.568354"
+  s.o_h_monday = "07:00"
+  s.o_h_tuesday = "07:00"
+  s.o_h_wednesday = "07:00"
+  s.o_h_thursday = "07:00"
+  s.o_h_friday = "07:00"
+  s.o_h_saturday = "08:00"
+  s.o_h_sunday = "09:00"
+  s.o_h_holiday = "10:00"
+  s.average_rating = 4
   s.save!
 end
 
@@ -209,11 +253,22 @@ Shop.new.tap do |s|
   s.name = "Luca's Cykler"
   s.address_line_1 = "Fredensgade 15A, 2200 Kobenhavn N, Denmark"
   s.address_line_2 = "Fredensgade 15A, 2200 Kobenhavn N, Denmark"
-  s.zipcode = "2200", s.city = "Kobenhavn", s.country = "Denmark", s.about = about_shop
-  s.phone_number = "4523323983", s.latitude = "55.693027", s.longitude = "55.693027"
-  s.o_h_monday = "10:00", s.o_h_tuesday = "10:00", s.o_h_wednesday = "10:00"
-  s.o_h_thursday = "10:00", s.o_h_friday = "10:00", s.o_h_saturday = "08:00"
-  s.o_h_sunday = "07:00", s.o_h_holiday = "10:00", s.average_rating = 4.5
+  s.zipcode = "2200"
+  s.city = "Kobenhavn"
+  s.country = "Denmark"
+  s.about = about_shop
+  s.phone_number = "4523323983"
+  s.latitude = "55.693027"
+  s.longitude = "55.693027"
+  s.o_h_monday = "10:00"
+  s.o_h_tuesday = "10:00"
+  s.o_h_wednesday = "10:00"
+  s.o_h_thursday = "10:00"
+  s.o_h_friday = "10:00"
+  s.o_h_saturday = "08:00"
+  s.o_h_sunday = "07:00"
+  s.o_h_holiday = "10:00"
+  s.average_rating = 4.5
   s.save!
 end
 
@@ -222,14 +277,25 @@ Shop.new.tap do |s|
   s.name = "Noa cykler"
   s.address_line_1 = "Nordre Frihavnsgade 56, 2100 Kobenhavn o, Denmark"
   s.address_line_2 = "Nordre Frihavnsgade 56, 2100 Kobenhavn o, Denmark"
-  s.zipcode = "2300", s.city = "Kobenhavn", s.country = "Denmark", s.about = about_shop
-  s.phone_number = "4550697675", s.latitude = "55.702282", s.longitude = "12.583174"
+  s.zipcode = "2300"
+  s.city = "Kobenhavn"
+  s.country = "Denmark"
+  s.about = about_shop
+  s.phone_number = "4550697675"
+  s.latitude = "55.702282"
+  s.longitude = "12.583174"
   s.about = "Christiania Smedie star bag de originale Christiania Cykler.
     Smedien blev stiftet i begyndelsen af 1970 erne og er en af de eldst
     eksisterende virksomheder på Christiania."
-  s.o_h_monday = "10:00", s.o_h_tuesday = "10:00", s.o_h_wednesday = "10:00"
-  s.o_h_thursday = "10:00", s.o_h_friday = "10:00", s.o_h_saturday = "08:00"
-  s.o_h_sunday = "07:00", s.o_h_holiday = "10:00", s.average_rating = 4.5
+  s.o_h_monday = "10:00"
+  s.o_h_tuesday = "10:00"
+  s.o_h_wednesday = "10:00"
+  s.o_h_thursday = "10:00"
+  s.o_h_friday = "10:00"
+  s.o_h_saturday = "08:00"
+  s.o_h_sunday = "07:00"
+  s.o_h_holiday = "10:00"
+  s.average_rating = 4.5
   s.save!
 end
 
@@ -239,11 +305,22 @@ Shop.new.tap do |s|
   s.name = "Bernhard Cykler"
   s.address_line_1 = "Nordre Fasanvej 100, 2000 Frederiksberg, Denmark"
   s.address_line_2 = "Nordre Fasanvej 100, 2000 Frederiksberg, Denmark"
-  s.zipcode = "2000", s.city = "Kobenhavn", s.country = "Denmark", s.about = about_shop
-  s.phone_number = "4538112277", s.latitude = "55.688142", s.longitude = "12.528010"
-  s.o_h_monday = "07:00", s.o_h_tuesday = "07:00", s.o_h_wednesday = "07:00"
-  s.o_h_thursday = "07:00", s.o_h_friday = "07:00", s.o_h_saturday = "08:00"
-  s.o_h_sunday = "09:00", s.o_h_holiday = "10:00", s.average_rating = 4
+  s.zipcode = "2000"
+  s.city = "Kobenhavn"
+  s.country = "Denmark"
+  s.about = about_shop
+  s.phone_number = "4538112277"
+  s.latitude = "55.688142"
+  s.longitude = "12.528010"
+  s.o_h_monday = "07:00"
+  s.o_h_tuesday = "07:00"
+  s.o_h_wednesday = "07:00"
+  s.o_h_thursday = "07:00"
+  s.o_h_friday = "07:00"
+  s.o_h_saturday = "08:00"
+  s.o_h_sunday = "09:00"
+  s.o_h_holiday = "10:00"
+  s.average_rating = 4
   s.save!
 end
 
@@ -252,11 +329,22 @@ Shop.new.tap do |s|
   s.name = "Christiania Blacksmith"
   s.address_line_1 = "Melkevejen 83a, 1440 Kobenhavn K, Denmark"
   s.address_line_2 = "Melkevejen 83a, 1440 Kobenhavn K, Denmark"
-  s.zipcode = "1440", s.city = "Kobenhavn", s.country = "Denmark", s.about = about_shop
-  s.phone_number = "4532548748", s.latitude = "55.673991", s.longitude = "12.601233"
-  s.o_h_monday = "10:00", s.o_h_tuesday = "10:00", s.o_h_wednesday = "10:00"
-  s.o_h_thursday = "10:00", s.o_h_friday = "10:00", s.o_h_saturday = "08:00"
-  s.o_h_sunday = "07:00", s.o_h_holiday = "10:00", s.average_rating = 5
+  s.zipcode = "1440"
+  s.city = "Kobenhavn"
+  s.country = "Denmark"
+  s.about = about_shop
+  s.phone_number = "4532548748"
+  s.latitude = "55.673991"
+  s.longitude = "12.601233"
+  s.o_h_monday = "10:00"
+  s.o_h_tuesday = "10:00"
+  s.o_h_wednesday = "10:00"
+  s.o_h_thursday = "10:00"
+  s.o_h_friday = "10:00"
+  s.o_h_saturday = "08:00"
+  s.o_h_sunday = "07:00"
+  s.o_h_holiday = "10:00"
+  s.average_rating = 5
   s.save!
 end
 
@@ -265,11 +353,22 @@ Shop.new.tap do |s|
   s.name = "Fri BikeShop, Kobenhavn NV"
   s.address_line_1 = "Tuborgvej 171, 2400 Kobenhavn NV, Denmark"
   s.address_line_2 = "Tuborgvej 171, 2400 Kobenhavn NV, Denmark"
-  s.zipcode = "2400", s.city = "Kobenhavn", s.country = "Denmark", s.about = about_shop
-  s.phone_number = "4550697675", s.latitude = "55.719514", s.longitude = "12.542482"
-  s.o_h_monday = "10:00", s.o_h_tuesday = "10:00", s.o_h_wednesday = "10:00"
-  s.o_h_thursday = "10:00", s.o_h_friday = "10:00", s.o_h_saturday = "08:00"
-  s.o_h_sunday = "07:00", s.o_h_holiday = "10:00", s.average_rating = 5
+  s.zipcode = "2400"
+  s.city = "Kobenhavn"
+  s.country = "Denmark"
+  s.about = about_shop
+  s.phone_number = "4550697675"
+  s.latitude = "55.719514"
+  s.longitude = "12.542482"
+  s.o_h_monday = "10:00"
+  s.o_h_tuesday = "10:00"
+  s.o_h_wednesday = "10:00"
+  s.o_h_thursday = "10:00"
+  s.o_h_friday = "10:00"
+  s.o_h_saturday = "08:00"
+  s.o_h_sunday = "07:00"
+  s.o_h_holiday = "10:00"
+  s.average_rating = 5
   s.save!
 end
 
@@ -322,12 +421,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_biomega.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Merida Bicycle", g.description = about_bike
+  g.picture = ""
+  g.title = "Merida Bicycle"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -349,12 +454,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_biomega.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Scott", g.description = about_bike
+  g.picture = ""
+  g.title = "Scott"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -376,12 +487,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_biomega.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Santa Cruz", g.description = about_bike
+  g.picture = ""
+  g.title = "Santa Cruz"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -403,12 +520,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_biomega.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Gary Turner", g.description = about_bike
+  g.picture = ""
+  g.title = "Gary Turner"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -430,12 +553,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_biomega.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Giant", g.description = about_bike
+  g.picture = ""
+  g.title = "Giant"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -458,12 +587,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_ekspres_klassisk_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Cannondale", g.description = about_bike
+  g.picture = ""
+  g.title = "Cannondale"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -485,12 +620,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_ekspres_klassisk_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Merida Bicycle", g.description = about_bike
+  g.picture = ""
+  g.title = "Merida Bicycle"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -512,12 +653,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_ekspres_klassisk_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Scott", g.description = about_bike
+  g.picture = ""
+  g.title = "Scott"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -539,12 +686,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_ekspres_klassisk_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Santa Cruz", g.description = about_bike
+  g.picture = ""
+  g.title = "Santa Cruz"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -566,12 +719,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_ekspres_klassisk_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Gary Turner", g.description = about_bike
+  g.picture = ""
+  g.title = "Gary Turner"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -593,12 +752,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_ekspres_klassisk_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Giant", g.description = about_bike
+  g.picture = ""
+  g.title = "Giant"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -621,12 +786,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_christiania_blacksmith.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Cannondale", g.description = about_bike
+  g.picture = ""
+  g.title = "Cannondale"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -648,12 +819,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_christiania_blacksmith.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Merida Bicycle", g.description = about_bike
+  g.picture = ""
+  g.title = "Merida Bicycle"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -675,12 +852,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_christiania_blacksmith.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Scott", g.description = about_bike
+  g.picture = ""
+  g.title = "Scott"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -702,12 +885,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_christiania_blacksmith.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Santa Cruz", g.description = about_bike
+  g.picture = ""
+  g.title = "Santa Cruz"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -729,12 +918,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_christiania_blacksmith.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Gary Turner", g.description = about_bike
+  g.picture = ""
+  g.title = "Gary Turner"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -756,12 +951,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_christiania_blacksmith.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Giant", g.description = about_bike
+  g.picture = ""
+  g.title = "Giant"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -785,12 +986,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_noa_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Cannondale", g.description = about_bike
+  g.picture = ""
+  g.title = "Cannondale"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -812,12 +1019,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_noa_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Merida Bicycle", g.description = about_bike
+  g.picture = ""
+  g.title = "Merida Bicycle"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -839,12 +1052,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_noa_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Scott", g.description = about_bike
+  g.picture = ""
+  g.title = "Scott"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -866,12 +1085,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_noa_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Santa Cruz", g.description = about_bike
+  g.picture = ""
+  g.title = "Santa Cruz"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -893,12 +1118,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_noa_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Gary Turner", g.description = about_bike
+  g.picture = ""
+  g.title = "Gary Turner"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -920,12 +1151,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_noa_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Giant", g.description = about_bike
+  g.picture = ""
+  g.title = "Giant"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -949,12 +1186,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_velorbis.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Cannondale", g.description = about_bike
+  g.picture = ""
+  g.title = "Cannondale"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -976,12 +1219,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_velorbis.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Merida Bicycle", g.description = about_bike
+  g.picture = ""
+  g.title = "Merida Bicycle"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -1003,12 +1252,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_velorbis.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Scott", g.description = about_bike
+  g.picture = ""
+  g.title = "Scott"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -1030,12 +1285,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_velorbis.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Santa Cruz", g.description = about_bike
+  g.picture = ""
+  g.title = "Santa Cruz"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -1057,12 +1318,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_velorbis.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Gary Turner", g.description = about_bike
+  g.picture = ""
+  g.title = "Gary Turner"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -1084,12 +1351,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_velorbis.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Giant", g.description = about_bike
+  g.picture = ""
+  g.title = "Giant"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
@@ -1145,12 +1418,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_biomega.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Merida Bicycle", g.description = about_bike
+  g.picture = ""
+  g.title = "Merida Bicycle"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
@@ -1172,12 +1451,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_biomega.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Scott", g.description = about_bike
+  g.picture = ""
+  g.title = "Scott"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
@@ -1199,12 +1484,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_biomega.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Santa Cruz", g.description = about_bike
+  g.picture = ""
+  g.title = "Santa Cruz"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
@@ -1226,12 +1517,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_biomega.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Gary Turner", g.description = about_bike
+  g.picture = ""
+  g.title = "Gary Turner"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
@@ -1253,12 +1550,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_biomega.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Giant", g.description = about_bike
+  g.picture = ""
+  g.title = "Giant"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
@@ -1281,12 +1584,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_ekspres_klassisk_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Cannondale", g.description = about_bike
+  g.picture = ""
+  g.title = "Cannondale"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
@@ -1308,12 +1617,17 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_ekspres_klassisk_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Merida Bicycle", g.description = about_bike
+  g.picture = ""
+  g.title = "Merida Bicycle", g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
@@ -1335,11 +1649,16 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_ekspres_klassisk_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Scott", g.description = about_bike
+  g.picture = ""
+  g.title = "Scott"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
+  g.instant_booking = false
+  g.total_quantity = 2
   g.free_quantity = 0, g.save!
 
   AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
@@ -1362,12 +1681,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_ekspres_klassisk_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Santa Cruz", g.description = about_bike
+  g.picture = ""
+  g.title = "Santa Cruz"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
@@ -1389,12 +1714,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_ekspres_klassisk_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Gary Turner", g.description = about_bike
+  g.picture = ""
+  g.title = "Gary Turner"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
@@ -1416,12 +1747,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_ekspres_klassisk_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Giant", g.description = about_bike
+  g.picture = ""
+  g.title = "Giant"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
@@ -1444,12 +1781,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_christiania_blacksmith.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Cannondale", g.description = about_bike
+  g.picture = ""
+  g.title = "Cannondale"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
@@ -1471,12 +1814,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_christiania_blacksmith.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Merida Bicycle", g.description = about_bike
+  g.picture = ""
+  g.title = "Merida Bicycle"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
@@ -1498,12 +1847,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_christiania_blacksmith.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Scott", g.description = about_bike
+  g.picture = ""
+  g.title = "Scott"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
@@ -1525,12 +1880,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_christiania_blacksmith.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Santa Cruz", g.description = about_bike
+  g.picture = ""
+  g.title = "Santa Cruz"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
@@ -1552,12 +1913,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_christiania_blacksmith.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Gary Turner", g.description = about_bike
+  g.picture = ""
+  g.title = "Gary Turner"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
@@ -1579,12 +1946,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_christiania_blacksmith.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Giant", g.description = about_bike
+  g.picture = ""
+  g.title = "Giant"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
@@ -1607,12 +1980,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_noa_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Cannondale", g.description = about_bike
+  g.picture = ""
+  g.title = "Cannondale"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
@@ -1634,12 +2013,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_noa_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Merida Bicycle", g.description = about_bike
+  g.picture = ""
+  g.title = "Merida Bicycle"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
@@ -1661,12 +2046,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_noa_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Scott", g.description = about_bike
+  g.picture = ""
+  g.title = "Scott"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
@@ -1688,12 +2079,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_noa_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Santa Cruz", g.description = about_bike
+  g.picture = ""
+  g.title = "Santa Cruz"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
@@ -1710,223 +2107,6 @@ Gear.new.tap do |g|
     gear_id: Gear.last.id, value: "4'9\"(148 cm)")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
     gear_id: Gear.last.id, value: "53 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_noa_cykler.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Gary Turner", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'8\"(145 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "54 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_noa_cykler.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Giant", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'7\"(144 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "55 cm")
-end
-
-########### Velorbis bikes, gear_type: mountain_bike ##############
-Gear.new.tap do |g|
-  g.shop_id = shop_velorbis.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Cannondale", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "Any Height")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "51 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_velorbis.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Merida Bicycle", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'6\"(137 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "50 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_velorbis.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Scott", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "5'1\"(152 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "52 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_velorbis.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Santa Cruz", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'9\"(148 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "53 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_velorbis.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Gary Turner", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'8\"(145 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "54 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_velorbis.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Giant", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'7\"(144 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "55 cm")
 end
 
 ############## Biomega bikes, gear_type: folding_bike ###################
@@ -1964,503 +2144,20 @@ Gear.new.tap do |g|
 end
 
 Gear.new.tap do |g|
-  g.shop_id = shop_biomega.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Merida Bicycle", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'6\"(137 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "50 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_biomega.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Scott", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "5'1\"(152 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "52 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_biomega.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Santa Cruz", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'9\"(148 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "53 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_biomega.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Gary Turner", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'8\"(145 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "54 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_biomega.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Giant", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'7\"(144 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "55 cm")
-end
-
-############ Ekspres Klassisk Cykler bikes, gear_type: folding_bike ###############
-Gear.new.tap do |g|
-  g.shop_id = shop_ekspres_klassisk_cykler.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Cannondale", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "Any Height")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "51 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_ekspres_klassisk_cykler.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Merida Bicycle", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'6\"(137 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "50 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_ekspres_klassisk_cykler.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Scott", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "5'1\"(152 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "52 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_ekspres_klassisk_cykler.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Santa Cruz", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'9\"(148 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "53 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_ekspres_klassisk_cykler.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Gary Turner", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'8\"(145 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "54 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_ekspres_klassisk_cykler.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Giant", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'7\"(144 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "55 cm")
-end
-
-############ Christiania Blacksmith bikes, gear_type: folding_bike ###########
-Gear.new.tap do |g|
-  g.shop_id = shop_christiania_blacksmith.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Cannondale", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "Any Height")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "51 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_christiania_blacksmith.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Merida Bicycle", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'6\"(137 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "50 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_christiania_blacksmith.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Scott", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "5'1\"(152 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "52 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_christiania_blacksmith.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Santa Cruz", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'9\"(148 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "53 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_christiania_blacksmith.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Gary Turner", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'8\"(145 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "54 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_christiania_blacksmith.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Giant", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'7\"(144 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "55 cm")
-end
-
-########### Noa Cykler bikes, gear_type: folding_bike ###############
-Gear.new.tap do |g|
   g.shop_id = shop_noa_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Cannondale", g.description = about_bike
+  g.picture = ""
+  g.title = "Merida Bicycle"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "Any Height")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "51 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_noa_cykler.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Merida Bicycle", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
 
@@ -2482,12 +2179,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_noa_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Scott", g.description = about_bike
+  g.picture = ""
+  g.title = "Scott"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
 
@@ -2509,12 +2212,18 @@ end
 Gear.new.tap do |g|
   g.shop_id = shop_noa_cykler.id
   g.category_id = category_bike.id
-  g.picture = "", g.title = "Santa Cruz", g.description = about_bike
+  g.picture = ""
+  g.title = "Santa Cruz"
+  g.description = about_bike
   g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
+  g.price_per_hour = 1
+  g.price_per_day = 5
+  g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
+  g.instant_booking = false
+  g.total_quantity = 2
+  g.free_quantity = 0
+  g.save!
 
   AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
 
@@ -2531,257 +2240,4 @@ Gear.new.tap do |g|
     gear_id: Gear.last.id, value: "4'9\"(148 cm)")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
     gear_id: Gear.last.id, value: "53 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_noa_cykler.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Gary Turner", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'8\"(145 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "54 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_noa_cykler.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Giant", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'7\"(144 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "55 cm")
-end
-
-########### Velorbis bikes, gear_type: folding_bike ##############
-Gear.new.tap do |g|
-  g.shop_id = shop_velorbis.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Cannondale", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "Any Height")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "51 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_velorbis.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Merida Bicycle", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'6\"(137 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "50 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_velorbis.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Scott", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "5'1\"(152 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "52 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_velorbis.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Santa Cruz", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'9\"(148 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "53 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_velorbis.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Gary Turner", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'8\"(145 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "54 cm")
-end
-
-Gear.new.tap do |g|
-  g.shop_id = shop_velorbis.id
-  g.category_id = category_bike.id
-  g.picture = "", g.title = "Giant", g.description = about_bike
-  g.currency = 1 # 1 means DKK
-  g.price_per_hour = 1, g.price_per_day = 5, g.price_per_week = 20
-  g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false, g.total_quantity = 2
-  g.free_quantity = 0, g.save!
-
-  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
-
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'7\"(144 cm)")
-  AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "55 cm")
-end
-
-############## Review #############################
-first_user_id = User.first.id
-second_user_id = User.second.id
-third_user_id = User.third.id
-fourth_user_id = User.fourth.id
-fifth_user_id = User.fifth.id
-
-review_text = "The Vita Vinyasa offers peace of
-  mind during trips to and from your yoga class,
-  the office or the grocery store."
-
-(1..8).each do |shop_id|
-  Review.create!(user_id: first_user_id, target_id: shop_id,
-    target_type: 1, rating: 4, text_message: review_text)
-end
-
-(5..8).each do |shop_id|
-  Review.create!(user_id: second_user_id, target_id: shop_id,
-    target_type: 1, rating: 5, text_message: review_text)
-end
-
-(3..7).each do |shop_id|
-  Review.create!(user_id: third_user_id, target_id: shop_id,
-    target_type: 1, rating: 3, text_message: review_text)
-end
-
-(1..8).each do |shop_id|
-  Review.create!(user_id: fourth_user_id, target_id: shop_id,
-    target_type: 1, rating: 4.5, text_message: review_text)
-end
-
-(1..4).each do |shop_id|
-  Review.create!(user_id: fifth_user_id, target_id: shop_id,
-    target_type: 1, rating: 4, text_message: review_text)
 end
