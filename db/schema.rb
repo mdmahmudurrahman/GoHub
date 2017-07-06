@@ -76,6 +76,7 @@ ActiveRecord::Schema.define(version: 20170619033704) do
     t.boolean "instant_booking"
     t.integer "total_quantity"
     t.integer "free_quantity"
+    t.string "img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_gears_on_category_id"
@@ -85,8 +86,8 @@ ActiveRecord::Schema.define(version: 20170619033704) do
   create_table "order_lists", force: :cascade do |t|
     t.bigint "gear_id"
     t.bigint "order_id"
-    t.time "start_time"
-    t.time "end_time"
+    t.date "start_time"
+    t.date "end_time"
     t.decimal "price_amount"
     t.decimal "service_fee"
     t.integer "status"

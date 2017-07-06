@@ -30,6 +30,7 @@ gem "font-awesome-rails"
 gem "jquery-rails"
 gem "momentjs-rails"
 gem "bootstrap-daterangepicker-rails"
+gem "geocoder"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]

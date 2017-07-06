@@ -6,149 +6,47 @@
   </div>
 
     <div id="gears-display" class="col-md-8 gears-display-no-padding">
-      <div class="col-md-6 wow fadeInDown gear-display-no-padding">
-        <%= image_tag("home_page/cycle_p_1.png", class: "img-responsive") %>
-        <div class="gear-details">
-          <span class="gear-title">$22 LITU Sport TT Racing Bike</span>
-          <span class="gear-details">Frame size 190-182 cm</span>
-        </div>
-        <span class="rating">
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
-        </span>
-        <span class="gear-reviews">53 Reviews</span>
-      </div>
 
-      <div class="col-md-6 wow fadeInDown gear-display-no-padding">
-        <%= image_tag("home_page/cycle_p_2.jpg", class: "img-responsive") %>
-        <div class="gear-details">
-          <span class="gear-title">$22 LITU Sport TT Racing Bike</span>
-          <span class="gear-details">Frame size 190-182 cm</span>
-        </div>
-        <span class="rating">
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
-        </span>
-        <span class="gear-reviews">53 Reviews</span>
-      </div>
+      <%
+      date_params = params[:datefilter]
+      date_params = date_params.split " - "
+      lat_long = []
 
-      <div class="col-md-6 wow fadeInDown gear-display-no-padding">
-        <%= image_tag("home_page/cycle_p_1.png", class: "img-responsive") %>
-        <div class="gear-details">
-          <span class="gear-title">$22 LITU Sport TT Racing Bike</span>
-          <span class="gear-details">Frame size 190-182 cm</span>
-        </div>
-        <span class="rating">
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
-        </span>
-        <span class="gear-reviews">53 Reviews</span>
-      </div>
+        @shops.each do |shop|
+          shop_location = {
+            "title": shop.name,
+            "lat": shop.latitude,
+            "lng": shop.longitude,
+            "description": "Details"
+          }
 
-      <div class="col-md-6 wow fadeInDown gear-display-no-padding">
-        <%= image_tag("home_page/cycle_p_2.jpg", class: "img-responsive") %>
-        <div class="gear-details">
-          <span class="gear-title">$22 LITU Sport TT Racing Bike</span>
-          <span class="gear-details">Frame size 190-182 cm</span>
-        </div>
-        <span class="rating">
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
-        </span>
-        <span class="gear-reviews">53 Reviews</span>
-      </div>
+          gears = shop.gears.search_by_category(params[:category]).search_gear(params[:quantity], date_params[0], date_params[1])
 
-      <div class="col-md-6 wow fadeInDown gear-display-no-padding">
-        <%= image_tag("home_page/cycle_p_1.png", class: "img-responsive") %>
-        <div class="gear-details">
-          <span class="gear-title">$22 LITU Sport TT Racing Bike</span>
-          <span class="gear-details">Frame size 190-182 cm</span>
-        </div>
-        <span class="rating">
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
-        </span>
-        <span class="gear-reviews">53 Reviews</span>
-      </div>
+          if gears.length > 0
+            lat_long.push shop_location
+          end
 
-      <div class="col-md-6 wow fadeInDown gear-display-no-padding">
-        <%= image_tag("home_page/cycle_p_2.jpg", class: "img-responsive") %>
-        <div class="gear-details">
-          <span class="gear-title">$22 LITU Sport TT Racing Bike</span>
-          <span class="gear-details">Frame size 190-182 cm</span>
-        </div>
-        <span class="rating">
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
-        </span>
-        <span class="gear-reviews">53 Reviews</span>
-      </div>
+          gears.each do |gear|
+            bike_img = gear.img ? "home_page/" + gear.img : "home_page/intro_image.jpg"
+          %>
+          <div class="col-md-6 wow fadeInDown gear-display-no-padding">
+            <%= image_tag(bike_img, class: "img-responsive bike_img") %>
+            <div class="gear-details">
+              <span class="gear-title">$<%= gear.price_per_day.to_i %> <%= gear.title.truncate 50 %></span>
+              <span class="gear-details">Frame size 190-182 cm</span>
+            </div>
+            <span class="rating">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
+            </span>
+            <span class="gear-reviews"><%= shop.reviews.count %> Reviews</span>
+          </div>
+        <% end %>
+      <% end %>
 
-      <div class="col-md-6 wow fadeInDown gear-display-no-padding">
-        <%= image_tag("home_page/cycle_p_2.jpg", class: "img-responsive") %>
-        <div class="gear-details">
-          <span class="gear-title">$22 LITU Sport TT Racing Bike</span>
-          <span class="gear-details">Frame size 190-182 cm</span>
-        </div>
-        <span class="rating">
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
-        </span>
-        <span class="gear-reviews">53 Reviews</span>
-      </div>
-
-      <div class="col-md-6 wow fadeInDown gear-display-no-padding">
-        <%= image_tag("home_page/cycle_p_2.jpg", class: "img-responsive") %>
-        <div class="gear-details">
-          <span class="gear-title">$22 LITU Sport TT Racing Bike</span>
-          <span class="gear-details">Frame size 190-182 cm</span>
-        </div>
-        <span class="rating">
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
-        </span>
-        <span class="gear-reviews">53 Reviews</span>
-      </div>
-
-      <div class="col-md-6 wow fadeInDown gear-display-no-padding">
-        <%= image_tag("home_page/cycle_p_1.png", class: "img-responsive") %>
-        <div class="gear-details">
-          <span class="gear-title">$22 LITU Sport TT Racing Bike</span>
-          <span class="gear-details">Frame size 190-182 cm</span>
-        </div>
-        <span class="rating">
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star" aria-hidden="true"></i></span>
-          <span><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
-        </span>
-        <span class="gear-reviews">53 Reviews</span>
-      </div>
     </div>
 
     <div class="col-md-4 gears-display-no-padding">
@@ -163,7 +61,7 @@
 
 <!-- <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBArxTME6txFlxQd-X0AaYuJWEiEuCWB94" type="text/javascript"></script> -->
 <script type="text/javascript">
-  var markers = [{"lat":"17.454000","lng":"78.434952","description":"Details"},{"title":"shilparamam","lat":"17.452665","lng":"78.435608","description":"Details"},{"title":"image hospitals","lat":"17.452421","lng":"78.435715","description":"Details"}];
+  var markers =  <%= raw lat_long.to_json %>;
 
   window.onload = function () {
     var mapOptions = {

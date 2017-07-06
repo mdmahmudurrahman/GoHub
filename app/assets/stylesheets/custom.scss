@@ -88,6 +88,7 @@ ul.ui-autocomplete {
   background-image: url("header/date_range.png");
   background-repeat: no-repeat;
   background-position: left center;
+  cursor: pointer;
 }
 
 .right-header {
@@ -105,6 +106,7 @@ ul.ui-autocomplete {
   float: right;
   margin-left: 5px;
   width: 182px;
+  cursor: pointer;
 }
 
 .gear-types {
@@ -178,32 +180,37 @@ ul.ui-autocomplete {
   margin-bottom: 40px;
 }
 
-.bike-cat {
-  background-image: url("header/bike_cat.png");
+.Bike-cat {
+  background-image: url("header/Bike_cat.png");
   background-size: 65px;
   cursor: pointer;
 }
 
-.skis-cat {
-  background-image: url("header/skis_cat.png");
+.Skiboard-cat {
+  background-image: url("header/Skiboard_cat.png");
   background-size: 46px;
   margin-left: 10px;
   padding-left: 65px !important;
   cursor: pointer;
 }
 
-.snowboard-cat {
-  background-image: url("header/snowboard_cat.png");
+.Snowboard-cat {
+  background-image: url("header/Snowboard_cat.png");
   background-size: 46px;
   margin-left: 10px;
   padding-left: 65px !important;
   cursor: pointer;
 }
 
-.sufrboard-cat {
-  background-image: url("header/surfboard_cat.png");
+.Surfboard-cat {
+  background-image: url("header/Surfboard_cat.png");
   background-size: 46px;
   margin-left: 10px;
   padding-left: 65px !important;
   cursor: pointer;
+}
+
+.bike_img {
+  height: 215px !important;
+  width: 365px !important;
 }
