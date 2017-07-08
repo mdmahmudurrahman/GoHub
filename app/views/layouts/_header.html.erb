@@ -49,7 +49,9 @@
               <input type="hidden" name="category" id="category" />
               <% end %>
           </div>
-          <% if request.path.split('/').last == "gears"
+          <%
+            c_path = request.path.split('/').last
+            if c_path == "gears"
               category = Category.find params[:category]
               gear_icon = "header/" + category.name + "_cat.png" %>
               <script type="text/javascript">
@@ -89,6 +91,21 @@
 </nav>
 
 <script type="text/javascript">
+  var locationOnChange = false;
+  var cPath = "<%= c_path %>";
+
+  var autocomplete;
+  function initAutocomplete() {
+    autocomplete = new google.maps.places.Autocomplete((document.getElementById('autocomplete')),
+      {types: ['geocode']});
+
+    google.maps.event.addListener(autocomplete, 'place_changed', function() {
+      var place = autocomplete.getPlace();
+      // console.log(place.address_components);
+        submitSearchFormOnFilterValueChanged("<%=params[:category]%>");
+    });
+  }
+
   $(function() {
     $('input[name="datefilter"]').daterangepicker({
       minDate: new Date(Date.now() - 86400000),
@@ -97,37 +114,28 @@
       locale: {
         cancelLabel: 'Close'
       }
+    },
+    function() {
+      submitSearchFormOnFilterValueChanged("<%=params[:category]%>");
     });
 
     var quantity=1;
-    $('.quantity-right-plus').click(function(e){
-      // Stop acting like a button
+    $('.quantity-right-plus').click(function(e) {
       e.preventDefault();
-      // Get the field name
       var quantity = parseInt($('#quantity').val());
-      // If is not undefined
       $('#quantity').val(quantity + 1);
-      // Increment
+      submitSearchFormOnFilterValueChanged("<%=params[:category]%>");
     });
 
-    $('.quantity-left-minus').click(function(e){
-      // Stop acting like a button
+    $('.quantity-left-minus').click(function(e) {
       e.preventDefault();
-      // Get the field name
       var quantity = parseInt($('#quantity').val());
-      // If is not undefined
-      // Increment
       if(quantity>1){
         $('#quantity').val(quantity - 1);
+        submitSearchFormOnFilterValueChanged("<%=params[:category]%>");
       }
     });
   });
-
-  var autocomplete;
-  function initAutocomplete() {
-    autocomplete = new google.maps.places.Autocomplete((document.getElementById('autocomplete')),
-      {types: ['geocode']});
-  }
 
   function showHideGearTypesDiv() {
     var x = document.getElementById('gear-types');
@@ -154,6 +162,12 @@
     document.getElementById("gear-types").style.display = 'none';
   }
 
+  function submitSearchFormOnFilterValueChanged(category) {
+    if(cPath == "gears") {
+      submitSearchForm(category);
+    }
+  }
+
   function submitSearchForm(category) {
     var location = document.getElementById("autocomplete");
     var datefilter = document.getElementById("datefilter");
@@ -173,7 +187,5 @@
     } else {
       alert(err);
     }
-
   }
 </script>
-
