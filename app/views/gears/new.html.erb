@@ -1,0 +1,19 @@
+<div class="container list-a-gear">
+  <div class="page-header">
+    <h3>List a Gear<br/>
+      <small>Gohub lets you make money renting out your Bike,
+        Surfboard, or Snowboard.
+      </small>
+    </h3>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <%= form_for @gear do |g| %>
+        <p>Select the gear category</p>
+        <%= g.radio_button :category_id, value: "test" %>
+        <%= g.radio_button :category_id, value: "test" %>
+        <%= g.radio_button :category_id, value: "test" %>
+      <% end %>
+    </div>
+  </div>
+</div>
