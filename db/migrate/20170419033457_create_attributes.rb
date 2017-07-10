@@ -4,6 +4,7 @@ class CreateAttributes < ActiveRecord::Migration[5.1]
       t.references :category, foreign_key: true
       t.string :name
       t.integer :attrib_type
+      t.string :img_path
 
       t.timestamps
     end

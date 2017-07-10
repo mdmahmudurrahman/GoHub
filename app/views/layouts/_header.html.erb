@@ -53,7 +53,7 @@
             c_path = request.path.split('/').last
             if c_path == "gears"
               category = Category.find params[:category]
-              gear_icon = "header/" + category.name + "_cat.png" %>
+              gear_icon = category.img_path %>
               <script type="text/javascript">
                 var d = document.getElementById("gear-field");
                 d.innerText = "<%= category.name %> + <%=params[:quantity]%>";

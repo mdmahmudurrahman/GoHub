@@ -4,9 +4,7 @@
   <div class="gears-display-top-div">
     <span id="map-show-btn" class="map-show-btn" onclick="showMapDiv()">Map</span>
   </div>
-
     <div id="gears-display" class="col-md-8 gears-display-no-padding">
-
       <%
       date_params = params[:datefilter]
       date_params = date_params.split " - "
@@ -27,7 +25,7 @@
           end
 
           gears.each do |gear|
-            bike_img = gear.img ? "home_page/" + gear.img : "home_page/intro_image.jpg"
+            bike_img = gear.img_path ? gear.img_path : "home_page/intro_image.jpg"
           %>
           <div class="col-md-6 wow fadeInDown gear-display-no-padding">
             <%= image_tag(bike_img, class: "img-responsive bike_img") %>
