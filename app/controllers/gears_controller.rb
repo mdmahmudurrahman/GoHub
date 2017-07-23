@@ -21,6 +21,6 @@ class GearsController < ApplicationController
   def gear_params
     params.require(:gear).permit(:shop_id, :title, :description,
       :currency, :price_per_day, :price_per_week, :image, :category_id,
-      attribute_values_attributes: [:attribute_ids])
+      attribute_values_attributes: [:attribute_id])
   end
 end

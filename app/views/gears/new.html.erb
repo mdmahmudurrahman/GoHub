@@ -64,6 +64,13 @@
                 class: "snowboard-accessories img-responsive center img-circle") + i.check_box(class: "accessories") } %>
             <% end %>
           </div>
+          <div id="bike-details">
+            <p>Bike details</p>
+            <% bike_details.each do |d| %>
+              <%= d.name %>
+              <%= a.text_field :attribute_id %><br>
+            <% end %>
+          </div>
         <% end %>
         <p>
           <%= g.label "Shop" %>
