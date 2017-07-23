@@ -47,7 +47,31 @@
                 </div>
               </div>
               <input type="hidden" name="category" id="category" />
-              <% end %>
+              <input type="hidden" name="search_type" id="search_type" value="basic" />
+
+              <input type="hidden" name="ad_price_range" value="<%=params[:ad_price_range]%>" />
+              <input type="hidden" name="price_range" value="<%=params[:price_range]%>" />
+
+              <input type="hidden" name="ad_gear_size" value="<%=params[:ad_gear_size]%>" />
+              <input type="hidden" name="height_from" value="<%=params[:height_from]%>" />
+              <input type="hidden" name="height_to" value="<%=params[:height_to]%>" />
+              <input type="hidden" name="frame_size" value="<%=params[:frame_size]%>" />
+
+              <input type="hidden" name="ad_gear_size" value="<%=params[:ad_gear_size]%>" />
+              <input type="hidden" name="height_from" value="<%=params[:height_from]%>" />
+              <input type="hidden" name="height_to" value="<%=params[:height_to]%>" />
+              <input type="hidden" name="frame_size" value="<%=params[:frame_size]%>" />
+
+              <input type="hidden" name="ad_instant_booking" value="<%=params[:ad_instant_booking]%>" />
+              <input type="hidden" name="instant_booking" value="<%=params[:instant_booking]%>" />
+
+              <input type="hidden" name="ad_gear_type" value="<%=params[:ad_gear_type]%>" />
+              <input type="hidden" name="gear_type_attribute_id" value="<%=params[:gear_type_attribute_id]%>" />
+
+              <input type="hidden" name="accesories_ids" value="<%=params[:accesories_ids]%>" />
+              <input type="hidden" name="rating_id" value="<%=params[:rating_id]%>" />
+              <input type="hidden" name="ad_more_filters" value="<%=params[:ad_more_filters]%>" />
+            <% end %>
           </div>
           <%
             c_path = request.path.split('/').last
@@ -142,6 +166,7 @@
     if (x.style.display === 'block') {
         x.style.display = 'none';
     } else {
+        hideAllOthersDiv("gear-types")
         x.style.display = 'block';
     }
   }

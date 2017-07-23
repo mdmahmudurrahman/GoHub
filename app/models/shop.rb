@@ -7,6 +7,8 @@ class Shop < ApplicationRecord
   geocoded_by :full_address
   after_validation :geocode
 
+  scope :has_filtered_gears, ->(ids) {where(id: ids)}
+
   def full_address
     "#{address_line_1}, #{city}, #{zipcode}, #{country}"
   end

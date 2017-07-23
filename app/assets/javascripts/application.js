@@ -18,3 +18,16 @@
 //= require_tree .
 //= require moment
 //= require daterangepicker
+
+var optDivModal = ["ads-price-range-div", "ads-gear-type-div", "ads-gear-size-div",
+  "ads-more-filters-div", "gear-types"];
+function hideAllOthersDiv(divName) {
+  for(i = 0; i < optDivModal.length; i++) {
+    if(divName != optDivModal[i]) {
+      var d = document.getElementById(optDivModal[i]);
+      if(d != null) {
+        d.style.display = 'none';
+      }
+    }
+  }
+}

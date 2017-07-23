@@ -57,12 +57,13 @@ end
 
 ############## Attribute type => gear_details #####################
 #Attribute: type => "gear_details(1)" for the category => "bike(1)"
-["Bike Rider Height", "Bike Frame Size"].each do |bike_details|
+["user_height_from", "user_height_to", "frame_size"].each do |bike_details|
   Attribute.create!(category_id: Category.first.id, name: "#{bike_details}", attrib_type: 1)
 end
 
-gear_details_bike_rider_height = Attribute.find_by(name: "Bike Rider Height", attrib_type: 1)
-gear_details_bike_frame_size = Attribute.find_by(name: "Bike Frame Size", attrib_type: 1)
+user_height_from = Attribute.find_by(name: "user_height_from", attrib_type: 1)
+user_height_to = Attribute.find_by(name: "user_height_to", attrib_type: 1)
+gear_details_bike_frame_size = Attribute.find_by(name: "frame_size", attrib_type: 1)
 
 #Attribute: type => "gear_details(1)" for the category => "Surfboard(2)"
 ["Board Size", "User Weight"].each do |surfboard_details|
@@ -420,21 +421,17 @@ Gear.new.tap do |g|
   g.img_path = "home_page/cycle_p_2.jpg"
   g.save!
 
-  AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
+  AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
   AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "Any Height")
+  AttributeValue.create!(attribute_id: user_height_from.id,
+    gear_id: Gear.last.id, value: "167.64")
+  AttributeValue.create!(attribute_id: user_height_to.id,
+    gear_id: Gear.last.id, value: "175.50")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "51 cm")
+    gear_id: Gear.last.id, value: "18")
 end
 
 Gear.new.tap do |g|
@@ -454,21 +451,16 @@ Gear.new.tap do |g|
   g.img_path = "home_page/b1.jpg"
   g.save!
 
-  AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
+  AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'6\"(137 cm)")
+  AttributeValue.create!(attribute_id: user_height_from.id,
+    gear_id: Gear.last.id, value: "165")
+  AttributeValue.create!(attribute_id: user_height_to.id,
+    gear_id: Gear.last.id, value: "170")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "50 cm")
+    gear_id: Gear.last.id, value: "19")
 end
 
 Gear.new.tap do |g|
@@ -488,21 +480,17 @@ Gear.new.tap do |g|
   g.img_path = "home_page/b2.jpg"
   g.save!
 
-  AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
+  AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
   AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "5'1\"(152 cm)")
+  AttributeValue.create!(attribute_id: user_height_from.id,
+    gear_id: Gear.last.id, value: "166.50")
+  AttributeValue.create!(attribute_id: user_height_to.id,
+    gear_id: Gear.last.id, value: "178.50")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "52 cm")
+    gear_id: Gear.last.id, value: "20")
 end
 
 Gear.new.tap do |g|
@@ -522,21 +510,18 @@ Gear.new.tap do |g|
   g.img_path = "home_page/b3.jpg"
   g.save!
 
-  AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
+  AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'9\"(148 cm)")
+  AttributeValue.create!(attribute_id: user_height_from.id,
+    gear_id: Gear.last.id, value: "170.64")
+  AttributeValue.create!(attribute_id: user_height_to.id,
+    gear_id: Gear.last.id, value: "180.50")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "53 cm")
+    gear_id: Gear.last.id, value: "18")
 end
 
 Gear.new.tap do |g|
@@ -556,21 +541,16 @@ Gear.new.tap do |g|
   g.img_path = "home_page/b4.jpg"
   g.save!
 
-  AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
+  AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'8\"(145 cm)")
+  AttributeValue.create!(attribute_id: user_height_from.id,
+    gear_id: Gear.last.id, value: "167.64")
+  AttributeValue.create!(attribute_id: user_height_to.id,
+    gear_id: Gear.last.id, value: "175.50")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "54 cm")
+    gear_id: Gear.last.id, value: "18")
 end
 
 Gear.new.tap do |g|
@@ -590,21 +570,16 @@ Gear.new.tap do |g|
   g.img_path = "home_page/b5.jpg"
   g.save!
 
-  AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
+  AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'7\"(144 cm)")
+  AttributeValue.create!(attribute_id: user_height_from.id,
+    gear_id: Gear.last.id, value: "165")
+  AttributeValue.create!(attribute_id: user_height_to.id,
+    gear_id: Gear.last.id, value: "170")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "55 cm")
+    gear_id: Gear.last.id, value: "18")
 end
 
 ############ Ekspres Klassisk Cykler bikes, gear_type: road_bike ###############
@@ -625,21 +600,18 @@ Gear.new.tap do |g|
   g.img_path = "home_page/b6.jpg"
   g.save!
 
-  AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
+  AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
   AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "Any Height")
+  AttributeValue.create!(attribute_id: user_height_from.id,
+    gear_id: Gear.last.id, value: "167.64")
+  AttributeValue.create!(attribute_id: user_height_to.id,
+    gear_id: Gear.last.id, value: "175.50")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "51 cm")
+    gear_id: Gear.last.id, value: "18")
 end
 
 Gear.new.tap do |g|
@@ -659,21 +631,23 @@ Gear.new.tap do |g|
   g.img_path = "home_page/b7.jpg"
   g.save!
 
-  AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
+  AttributeValue.create!(attribute_id: gear_type_mountain_bike.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'6\"(137 cm)")
+  AttributeValue.create!(attribute_id: user_height_from.id,
+    gear_id: Gear.last.id, value: "167.64")
+  AttributeValue.create!(attribute_id: user_height_to.id,
+    gear_id: Gear.last.id, value: "175.50")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "50 cm")
+    gear_id: Gear.last.id, value: "20")
 end
 
 Gear.new.tap do |g|
@@ -693,21 +667,23 @@ Gear.new.tap do |g|
   g.img_path = "home_page/b8.jpg"
   g.save!
 
-  AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
+  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "5'1\"(152 cm)")
+  AttributeValue.create!(attribute_id: user_height_from.id,
+    gear_id: Gear.last.id, value: "160")
+  AttributeValue.create!(attribute_id: user_height_to.id,
+    gear_id: Gear.last.id, value: "170")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "52 cm")
+    gear_id: Gear.last.id, value: "18")
 end
 
 Gear.new.tap do |g|
@@ -727,21 +703,23 @@ Gear.new.tap do |g|
   g.img_path = "home_page/b9.jpg"
   g.save!
 
-  AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
+  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'9\"(148 cm)")
+  AttributeValue.create!(attribute_id: user_height_from.id,
+    gear_id: Gear.last.id, value: "162")
+  AttributeValue.create!(attribute_id: user_height_to.id,
+    gear_id: Gear.last.id, value: "175.50")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "53 cm")
+    gear_id: Gear.last.id, value: "20")
 end
 
 Gear.new.tap do |g|
@@ -761,21 +739,23 @@ Gear.new.tap do |g|
   g.img_path = "home_page/b10.jpg"
   g.save!
 
-  AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
+  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'8\"(145 cm)")
+  AttributeValue.create!(attribute_id: user_height_from.id,
+    gear_id: Gear.last.id, value: "167.64")
+  AttributeValue.create!(attribute_id: user_height_to.id,
+    gear_id: Gear.last.id, value: "175.50")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "54 cm")
+    gear_id: Gear.last.id, value: "18")
 end
 
 Gear.new.tap do |g|
@@ -797,19 +777,21 @@ Gear.new.tap do |g|
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'7\"(144 cm)")
+  AttributeValue.create!(attribute_id: user_height_from.id,
+    gear_id: Gear.last.id, value: "167.64")
+  AttributeValue.create!(attribute_id: user_height_to.id,
+    gear_id: Gear.last.id, value: "175.50")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "55 cm")
+    gear_id: Gear.last.id, value: "19")
 end
 
 ############ Christiania Blacksmith bikes, gear_type: road_bike ###########
@@ -824,27 +806,23 @@ Gear.new.tap do |g|
   g.price_per_day = 8
   g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false
+  g.instant_booking = true
   g.total_quantity = 2
   g.free_quantity = 0
   g.img_path = "home_page/b12.jpg"
   g.save!
 
-  AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
+  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
 
   AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "Any Height")
+  AttributeValue.create!(attribute_id: user_height_from.id,
+    gear_id: Gear.last.id, value: "157.64")
+  AttributeValue.create!(attribute_id: user_height_to.id,
+    gear_id: Gear.last.id, value: "175.50")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "51 cm")
+    gear_id: Gear.last.id, value: "18")
 end
 
 Gear.new.tap do |g|
@@ -864,21 +842,17 @@ Gear.new.tap do |g|
   g.img_path = "home_page/b13.jpg"
   g.save!
 
-  AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
+  AttributeValue.create!(attribute_id: gear_type_folding_bike.id, gear_id: Gear.last.id)
 
   AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'6\"(137 cm)")
+  AttributeValue.create!(attribute_id: user_height_from.id,
+    gear_id: Gear.last.id, value: "167.64")
+  AttributeValue.create!(attribute_id: user_height_to.id,
+    gear_id: Gear.last.id, value: "170.50")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "50 cm")
+    gear_id: Gear.last.id, value: "18")
 end
 
 Gear.new.tap do |g|
@@ -892,7 +866,7 @@ Gear.new.tap do |g|
   g.price_per_day = 5
   g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false
+  g.instant_booking = true
   g.total_quantity = 10
   g.free_quantity = 0
   g.img_path = "home_page/b14.jpg"
@@ -904,15 +878,13 @@ Gear.new.tap do |g|
   AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "5'1\"(152 cm)")
+  AttributeValue.create!(attribute_id: user_height_from.id,
+    gear_id: Gear.last.id, value: "167.64")
+  AttributeValue.create!(attribute_id: user_height_to.id,
+    gear_id: Gear.last.id, value: "175.50")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "52 cm")
+    gear_id: Gear.last.id, value: "19")
 end
 
 Gear.new.tap do |g|
@@ -934,19 +906,14 @@ Gear.new.tap do |g|
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'9\"(148 cm)")
+  AttributeValue.create!(attribute_id: user_height_from.id,
+    gear_id: Gear.last.id, value: "169.64")
+  AttributeValue.create!(attribute_id: user_height_to.id,
+    gear_id: Gear.last.id, value: "175.50")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "53 cm")
+    gear_id: Gear.last.id, value: "18")
 end
 
 Gear.new.tap do |g|
@@ -960,7 +927,7 @@ Gear.new.tap do |g|
   g.price_per_day = 5
   g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false
+  g.instant_booking = true
   g.total_quantity = 2
   g.free_quantity = 0
   g.img_path = "home_page/b16.jpg"
@@ -968,19 +935,21 @@ Gear.new.tap do |g|
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'8\"(145 cm)")
+  AttributeValue.create!(attribute_id: user_height_from.id,
+    gear_id: Gear.last.id, value: "167.64")
+  AttributeValue.create!(attribute_id: user_height_to.id,
+    gear_id: Gear.last.id, value: "176.50")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "54 cm")
+    gear_id: Gear.last.id, value: "18")
 end
 
 Gear.new.tap do |g|
@@ -1002,19 +971,21 @@ Gear.new.tap do |g|
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
+  # AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'7\"(144 cm)")
+  AttributeValue.create!(attribute_id: user_height_from.id,
+    gear_id: Gear.last.id, value: "167.64")
+  AttributeValue.create!(attribute_id: user_height_to.id,
+    gear_id: Gear.last.id, value: "175.50")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "55 cm")
+    gear_id: Gear.last.id, value: "18")
 end
 
 
@@ -1030,7 +1001,7 @@ Gear.new.tap do |g|
   g.price_per_day = 5
   g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false
+  g.instant_booking = true
   g.total_quantity = 2
   g.free_quantity = 0
   g.img_path = "home_page/b18.jpg"
@@ -1038,19 +1009,15 @@ Gear.new.tap do |g|
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "Any Height")
+  AttributeValue.create!(attribute_id: user_height_from.id,
+    gear_id: Gear.last.id, value: "167.64")
+  AttributeValue.create!(attribute_id: user_height_to.id,
+    gear_id: Gear.last.id, value: "175.50")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "51 cm")
+    gear_id: Gear.last.id, value: "18")
 end
 
 Gear.new.tap do |g|
@@ -1072,19 +1039,14 @@ Gear.new.tap do |g|
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "4'6\"(137 cm)")
+  AttributeValue.create!(attribute_id: user_height_from.id,
+    gear_id: Gear.last.id, value: "160.64")
+  AttributeValue.create!(attribute_id: user_height_to.id,
+    gear_id: Gear.last.id, value: "170.50")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "50 cm")
+    gear_id: Gear.last.id, value: "19")
 end
 
 Gear.new.tap do |g|
@@ -1098,7 +1060,7 @@ Gear.new.tap do |g|
   g.price_per_day = 19
   g.price_per_week = 20
   g.status = 0 # 0 means available to rent 1 means not available
-  g.instant_booking = false
+  g.instant_booking = true
   g.total_quantity = 1
   g.free_quantity = 0
   g.img_path = "home_page/b20.jpg"
@@ -1107,18 +1069,13 @@ Gear.new.tap do |g|
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
 
   AttributeValue.create!(attribute_id: accessory_bike_lock.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_light.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_bell.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
 
-  AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
-    gear_id: Gear.last.id, value: "5'1\"(152 cm)")
+  AttributeValue.create!(attribute_id: user_height_from.id,
+    gear_id: Gear.last.id, value: "162")
+  AttributeValue.create!(attribute_id: user_height_to.id,
+    gear_id: Gear.last.id, value: "175.50")
   AttributeValue.create!(attribute_id: gear_details_bike_frame_size.id,
-    gear_id: Gear.last.id, value: "52 cm")
+    gear_id: Gear.last.id, value: "18")
 end
 
 # OrderList.new.tap do |l|
