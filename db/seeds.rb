@@ -1,7 +1,7 @@
 # Category
 ["Bike", "Surfboard", "Snowboard", "Skiboard"]
   .each do |category|
-  Category.create!(name: "#{category}")
+  Category.create!(name: "#{category}", image: "#{category}.png")
 end
 
 category_bike = Category.find_by!(name: "Bike")
@@ -11,7 +11,7 @@ category_snowboard = Category.find_by!(name: "Snowboard")
 ############## Attribute type => gear_type #####################
 #Attribute: type => "gear_type(0)" for the category => "Bike(1)"
 ["Road", "Mountain", "Cruiser", "Folding", "Fixed Gear", "Single Speed",
-  "Hybrid", "Children's", "Cargo", "Tandem", "Cyclocross", "BMX", "Traithlon",
+  "Hybrid", "Children", "Cargo", "Tandem", "Cyclocross", "BMX", "Traithlon",
   "Touring", "One of A Kind", "Electric", "Tricycle", "Recumbent", "Wheels",
   "Fat"].each do |bike_type|
     Attribute.create!(category_id: Category.first.id, name: "#{bike_type}", attrib_type: 0)
@@ -29,7 +29,8 @@ gear_type_cargo_bike = Attribute.find_by(name: "Cargo", attrib_type: 0)
 gear_type_tandem_bike = Attribute.find_by(name: "Tandem", attrib_type: 0)
 
 #Attribute: type => "gear_type(0)" for the category => "Surfboard(2)"
-["Surfboard", "Stand Up Paddle"].each do |surfboard_type|
+["Surfboard", "Stand Up Paddle", "Fish Fun", "Foam", "Gun Step Up",
+  "Longboard", "Shortboard", "Specialty"].each do |surfboard_type|
   Attribute.create!(category_id: Category.second.id, name: "#{surfboard_type}", attrib_type: 0)
 end
 
@@ -37,7 +38,8 @@ gear_type_surfboard_gear_surfboard = Attribute.find_by(name: "Surfboard", attrib
 gear_type_stand_up_paddle_surfboard = Attribute.find_by(name: "Stand Up Paddle", attrib_type: 0)
 
 #Attribute: type => "gear_type(0)" for the category => "Snowboard(3)"
-["Skis", "Snowboard"].each do |snowboard_type|
+["Skis", "Snowboard", "All Mountain", "Carving", "Freeride", "Freestyle",
+  "Powder", "Splitboard"].each do |snowboard_type|
   Attribute.create!(category_id: Category.third.id, name: "#{snowboard_type}", attrib_type: 0)
 end
 
@@ -74,7 +76,7 @@ gear_details_snowboard_user_height = Attribute.find_by(name: "User Weight", attr
 ############## Attribute type => accessory #####################
 #Attribute: type => "accessory(2)" for the category => "bike(1)"
 ["Lock", "Helmet", "Light", "Bell", "Reflector", "Basket",
-  "Trailer", "Surfboard Rack"].each do |bike_accessory|
+  "Trailer", "Rack"].each do |bike_accessory|
     Attribute.create!(category_id: Category.first.id, name: "#{bike_accessory}", attrib_type: 2)
 end
 
@@ -85,11 +87,11 @@ accessory_bike_bell = Attribute.find_by(name: "Bell", attrib_type: 2)
 accessory_bike_reflector = Attribute.find_by(name: "Reflector", attrib_type: 2)
 accessory_bike_basket = Attribute.find_by(name: "Basket", attrib_type: 2)
 accessory_bike_trailer = Attribute.find_by(name: "Trailer", attrib_type: 2)
-accessory_bike_surfboard_rack = Attribute.find_by(name: "Surfboard Rack", attrib_type: 2)
+accessory_bike_surfboard_rack = Attribute.find_by(name: "Lock", attrib_type: 2)
 
 #Attribute: type => "accessory(2)" for the category => "Surfboard(2)"
-["Leash", "Wetsuit", "Car Rack", "Wax", "Board Bag", "Fins",
-  "Paddles"].each do |surfboard_accessory|
+["leash", "wetsuit", "rack", "wax", "bag",
+  "fins"].each do |surfboard_accessory|
     Attribute.create!(category_id: Category.second.id,
       name: "#{surfboard_accessory}", attrib_type: 2)
 end
@@ -100,8 +102,7 @@ accessory_surfboard_car_rack = Attribute.find_by(name: "Car Rack", attrib_type: 
 accessory_surfboard_wax = Attribute.find_by(name: "Wax", attrib_type: 2)
 
 #Attribute: type => "accessory(2)" for the category => "Snowboard(3)"
-["Alpine", "Cross Country", "Telemark", "Randonnée", "Non-release Binding",
- "Ski Poles", "Ski Boots", "Helmet", "Snowboard Boots", "Snowboard Bindings"]
+["binding", "boots", "helmet", "rack", "glasses"]
   .each do |snowboard_accessory|
   Attribute.create!(category_id: Category.third.id,
     name: "#{snowboard_accessory}", attrib_type: 2)
@@ -408,7 +409,7 @@ Gear.new.tap do |g|
   AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
+  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
 
   AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
     gear_id: Gear.last.id, value: "Any Height")
@@ -430,7 +431,7 @@ Gear.new.tap do |g|
   g.instant_booking = false
   g.total_quantity = 5
   g.free_quantity = 0
-  g.img = "b1.jpg"
+  g.image = "b1.jpg"
   g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
@@ -442,7 +443,7 @@ Gear.new.tap do |g|
   AttributeValue.create!(attribute_id: accessory_bike_reflector.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_basket.id, gear_id: Gear.last.id)
   AttributeValue.create!(attribute_id: accessory_bike_trailer.id, gear_id: Gear.last.id)
-  AttributeValue.create!(attribute_id: accessory_bike_surfboard_rack.id, gear_id: Gear.last.id)
+  AttributeValue.create!(attribute_id: accessory_bike_helmet.id, gear_id: Gear.last.id)
 
   AttributeValue.create!(attribute_id: gear_details_bike_rider_height.id,
     gear_id: Gear.last.id, value: "4'6\"(137 cm)")
@@ -464,7 +465,7 @@ Gear.new.tap do |g|
   g.instant_booking = false
   g.total_quantity = 1
   g.free_quantity = 0
-  g.img = "b2.jpg"
+  g.image = "b2.jpg"
   g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
@@ -498,7 +499,7 @@ Gear.new.tap do |g|
   g.instant_booking = false
   g.total_quantity = 1
   g.free_quantity = 0
-  g.img = "b3.jpg"
+  g.image = "b3.jpg"
   g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
@@ -532,7 +533,7 @@ Gear.new.tap do |g|
   g.instant_booking = false
   g.total_quantity = 1
   g.free_quantity = 0
-  g.img = "b4.jpg"
+  g.image = "b4.jpg"
   g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
@@ -566,7 +567,7 @@ Gear.new.tap do |g|
   g.instant_booking = false
   g.total_quantity = 5
   g.free_quantity = 0
-  g.img = "b5.jpg"
+  g.image = "b5.jpg"
   g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
@@ -601,7 +602,7 @@ Gear.new.tap do |g|
   g.instant_booking = false
   g.total_quantity = 2
   g.free_quantity = 0
-  g.img = "b6.jpg"
+  g.image = "b6.jpg"
   g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
@@ -635,7 +636,7 @@ Gear.new.tap do |g|
   g.instant_booking = false
   g.total_quantity = 2
   g.free_quantity = 0
-  g.img = "b7.jpg"
+  g.image = "b7.jpg"
   g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
@@ -669,7 +670,7 @@ Gear.new.tap do |g|
   g.instant_booking = false
   g.total_quantity = 1
   g.free_quantity = 0
-  g.img = "b8.jpg"
+  g.image = "b8.jpg"
   g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
@@ -703,7 +704,7 @@ Gear.new.tap do |g|
   g.instant_booking = false
   g.total_quantity = 2
   g.free_quantity = 0
-  g.img = "b9.jpg"
+  g.image = "b9.jpg"
   g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
@@ -737,7 +738,7 @@ Gear.new.tap do |g|
   g.instant_booking = false
   g.total_quantity = 2
   g.free_quantity = 0
-  g.img = "b10.jpg"
+  g.image = "b10.jpg"
   g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
@@ -771,7 +772,7 @@ Gear.new.tap do |g|
   g.instant_booking = false
   g.total_quantity = 4
   g.free_quantity = 0
-  g.img = "b11.jpg"
+  g.image = "b11.jpg"
   g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
@@ -806,7 +807,7 @@ Gear.new.tap do |g|
   g.instant_booking = false
   g.total_quantity = 2
   g.free_quantity = 0
-  g.img = "b12.jpg"
+  g.image = "b12.jpg"
   g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
@@ -840,7 +841,7 @@ Gear.new.tap do |g|
   g.instant_booking = false
   g.total_quantity = 1
   g.free_quantity = 0
-  g.img = "b13.jpg"
+  g.image = "b13.jpg"
   g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
@@ -874,7 +875,7 @@ Gear.new.tap do |g|
   g.instant_booking = false
   g.total_quantity = 10
   g.free_quantity = 0
-  g.img = "b14.jpg"
+  g.image = "b14.jpg"
   g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
@@ -908,7 +909,7 @@ Gear.new.tap do |g|
   g.instant_booking = false
   g.total_quantity = 2
   g.free_quantity = 0
-  g.img = "b15.jpg"
+  g.image = "b15.jpg"
   g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
@@ -942,7 +943,7 @@ Gear.new.tap do |g|
   g.instant_booking = false
   g.total_quantity = 2
   g.free_quantity = 0
-  g.img = "b16.jpg"
+  g.image = "b16.jpg"
   g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
@@ -976,7 +977,7 @@ Gear.new.tap do |g|
   g.instant_booking = false
   g.total_quantity = 1
   g.free_quantity = 0
-  g.img = "b17.jpg"
+  g.image = "b17.jpg"
   g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
@@ -1012,7 +1013,7 @@ Gear.new.tap do |g|
   g.instant_booking = false
   g.total_quantity = 2
   g.free_quantity = 0
-  g.img = "b18.jpg"
+  g.image = "b18.jpg"
   g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
@@ -1046,7 +1047,7 @@ Gear.new.tap do |g|
   g.instant_booking = false
   g.total_quantity = 2
   g.free_quantity = 0
-  g.img = "b19.jpg"
+  g.image = "b19.jpg"
   g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)
@@ -1080,7 +1081,7 @@ Gear.new.tap do |g|
   g.instant_booking = false
   g.total_quantity = 1
   g.free_quantity = 0
-  g.img = "b20.jpg"
+  g.image = "b20.jpg"
   g.save!
 
   AttributeValue.create!(attribute_id: gear_type_road_bike.id, gear_id: Gear.last.id)

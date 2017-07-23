@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20170619033704) do
 
   create_table "categories", force: :cascade do |t|
     t.string "name"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -76,7 +77,7 @@ ActiveRecord::Schema.define(version: 20170619033704) do
     t.boolean "instant_booking"
     t.integer "total_quantity"
     t.integer "free_quantity"
-    t.string "img"
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_gears_on_category_id"

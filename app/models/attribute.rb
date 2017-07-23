@@ -3,4 +3,8 @@ class Attribute < ApplicationRecord
   has_many :attribute_values
 
   enum attrib_type: [:gear_type, :gear_details, :accessory]
+
+  def image
+    self.name
+  end
 end

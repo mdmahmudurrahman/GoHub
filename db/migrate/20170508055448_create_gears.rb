@@ -16,7 +16,7 @@ class CreateGears < ActiveRecord::Migration[5.1]
       t.boolean :instant_booking
       t.integer :total_quantity
       t.integer :free_quantity
-      t.string :img
+      t.string :image
 
       t.timestamps
     end

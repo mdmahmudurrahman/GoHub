@@ -8,11 +8,85 @@
   </div>
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <%= form_for @gear do |g| %>
+      <%= form_for(@gear) do |g| %>
         <p>Select the gear category</p>
-        <%= g.radio_button :category_id, value: "test" %>
-        <%= g.radio_button :category_id, value: "test" %>
-        <%= g.radio_button :category_id, value: "test" %>
+        <%= g.collection_radio_buttons(:category_id, categories, :id, :image) do |i| %>
+          <%= i.label { image_tag("gear_category/#{i.object.image}.png",
+            class: "gear-category img-responsive center img-circle", id: "gear_category_id_#{i.object.id}_image")\
+            + i.radio_button } %>
+        <% end %>
+        <%= g.fields_for :attribute_values_attributes do |a| %>
+          <div id="gear-type-bike">
+            <p>Select the bike type</p>
+            <%= a.collection_radio_buttons(:attribute_id, bike_types, :id, :image, include_hidden: false) do |i| %>
+              <%= i.label { image_tag("gear_type/bike/#{i.object.name}.png",
+              class: "bike-type img-responsive center img-circle", id: "gear_attribute_values_attribute_id_#{i.object.id}_image")\
+              + i.radio_button } %>
+            <% end %>
+          </div>
+          <div id="gear-type-surfboard">
+            <p>Select the surfboard type</p>
+            <%= a.collection_radio_buttons(:attribute_id, snowboard_types, :id, :image, include_hidden: false) do |i| %>
+              <%= i.label { image_tag("gear_type/surfboard/#{i.object.name}.png",
+              class: "surfboard-type img-responsive center img-circle", id: "gear_attribute_values_attribute_id_#{i.object.id}_image")\
+              + i.radio_button } %>
+            <% end %>
+          </div>
+          <div id="gear-type-snowboard">
+            <p>Select the snowboard type</p>
+            <%= a.collection_radio_buttons(:attribute_id, surfboard_types, :id, :image, include_hidden: false) do |i| %>
+              <%= i.label { image_tag("gear_type/snowboard/#{i.object.image}.png",
+                class: "snowboard-type img-responsive center img-circle", id: "gear_attribute_values_attribute_id_#{i.object.id}_image")\
+                + i.radio_button } %>
+            <% end %>
+          </div>
+          <div id="bike-extras">
+            <p>Extras included in the rental</p>
+            <%= a.collection_check_boxes(:attribute_ids, bike_accessories, :id, :image) do |i| %>
+              <%= i.label {image_tag("gear_accessories/bike/#{i.object.image}.png",
+                id: "gear_attribute_values_attribute_id_#{i.object.id}_image",
+                class: "bike-accessories img-responsive center img-circle") + i.check_box(class: "accessories") } %>
+            <% end %>
+          </div>
+          <div id="snowboard-extras">
+            <p>Extras included in the rental</p>
+            <%= a.collection_check_boxes(:attribute_ids, snowboard_accessories, :id, :image) do |i| %>
+              <%= i.label { image_tag("gear_accessories/snowboard/#{i.object.image}.png",
+              id: "gear_attribute_values_attribute_id_#{i.object.id}_image",
+              class: "snowboard-accessories img-responsive center img-circle") + i.check_box(class: "accessories") } %>
+            <% end %>
+          </div>
+          <div id="surfboard-extras">
+            <p>Extras included in the rental</p>
+            <%= a.collection_check_boxes(:attribute_ids, surfboard_accessories, :id, :image) do |i| %>
+              <%= i.label {image_tag("gear_accessories/surfboard/#{i.object.image}.png",
+                id: "gear_attribute_values_attribute_id_#{i.object.id}_image",
+                class: "snowboard-accessories img-responsive center img-circle") + i.check_box(class: "accessories") } %>
+            <% end %>
+          </div>
+        <% end %>
+        <p>
+          <%= g.label "Shop" %>
+          <%= g.select :shop_id, locations(current_user) %>
+        </p>
+
+          <p>
+            <%= g.label :currency%>
+            <%= g.select :currency, all_currency %>
+          </p>
+          <p>
+            <%= g.label :price_per_day, "Price/day" %>
+            <%= g.text_field :price_per_day %>
+          </p>
+          <p>
+            <%= g.label :price_per_week, "Price/week" %>
+            <%= g.text_field :price_per_week %>
+          </p>
+          <div class="field">
+            <%= g.label "Add your image" %>
+            <%= g.file_field :image %>
+          </div>
+        <%= g.submit "submit" %>
       <% end %>
     </div>
   </div>

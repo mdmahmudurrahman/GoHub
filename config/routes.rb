@@ -22,7 +22,7 @@ Rails.application.routes.draw do
       resources :shops
     end
 
-    resources :gears, only: [:index, :create]
+    resources :gears, only: [:index, :create, :new]
     get "list-a-gear", to: "gears#new"
   end
 end
