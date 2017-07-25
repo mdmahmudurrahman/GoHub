@@ -1,0 +1,77 @@
+<div class="container shop-information">
+  <div class="page-header">
+    <div class="progress">
+      <div class="progress-bar progress-bar-info progress-bar-striped active"
+        role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+        style="width: 70%">
+        70% completed
+      </div>
+    </div>
+    <h3>Shops</h3>
+  </div>
+  <div>
+    <%= form_for [:company, @shop],
+      html: {class: "col-md-6", id: "shop-information-form"} do |s| %>
+      <div id="company-information-form">
+        <div class="form-group row">
+          <%= s.label :shop_name, class:"col-sm-4 col-form-label" %>
+          <div class="col-sm-8">
+            <%= s.text_field :name, class: "form-control" %>
+          </div>
+        </div>
+        <div class="form-group row">
+          <%= s.label :address_line_1, class:"col-sm-4 col-form-label" %>
+          <div class="col-sm-8">
+            <%= s.text_area :address_line_1, class: "form-control" %>
+          </div>
+        </div>
+        <div class="form-group row">
+          <%= s.label :address_line_2, class:"col-sm-4 col-form-label" %>
+          <div class="col-sm-8">
+            <%= s.text_area :address_line_2, class: "form-control" %>
+          </div>
+        </div>
+        <div class="form-group row">
+          <%= s.label :zipcode, class:"col-sm-2 col-form-label" %>
+          <div class="col-sm-2 col-sm-offset-2">
+            <%= s.text_field :zipcode, class: "form-control" %>
+          </div>
+          <%= s.label :city, class:"col-sm-2 col-form-label",
+            id: "company-information-city" %>
+          <div class="col-sm-4">
+            <%= s.text_field :city, class: "form-control" %>
+          </div>
+        </div>
+        <div class="form-group row">
+          <%= s.label :country, class:"col-sm-4 col-form-label" %>
+          <div class="col-sm-8">
+            <%= s.text_field :country, class: "form-control" %>
+          </div>
+        </div>
+        <div class="form-group row">
+          <%= s.label :phone_number, class:"col-sm-4 col-form-label" %>
+          <div class="col-sm-8">
+            <%= s.text_field :phone_number, class: "form-control" %>
+          </div>
+        </div>
+      </div>
+      <div class="row company-information-submit pull-right">
+        <div class="col-sm-12">
+          <%= link_to "Back", company_path(current_user),
+            class:"btn btn-default btn-sm",
+            id:"company-information-btn-cancel" %>
+          <%= s.submit "Add", class: "btn btn-info btn-sm",
+            id: "shop-information-btn-add" %>
+          <%= button_to "Next", company_shops_path, method: :post,
+            class:"btn btn-info btn-sm",
+            id:"shop-information-btn-submit" %>
+        </div>
+      </div>
+    <% end %>
+    <div class="col-md-6 shop-zone">
+      <div class="col-md-12 added-shops">
+        <!-- dynamically added shop information -->
+      </div>
+    </div>
+  </div>
+</div>

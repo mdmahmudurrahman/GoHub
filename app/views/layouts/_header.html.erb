@@ -1,0 +1,216 @@
+<nav class="navbar navbar-default navbar-fixed-top topnav top-header" role="navigation">
+  <div class="container topnav">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse"
+        data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="navbar-brand topnav left-header">
+        <%= link_to image_tag("header/logo.png", alt: "GoHub", class: "logo"),
+          root_path %>
+        <% if !user_signed_in? || (user_signed_in? && current_user.user_type != 1) %>
+          <div class="search-field">
+            <%= form_tag gears_path, method: :get, :id => 'my-form' do %>
+              <input name="location" id="autocomplete" class="location" placeholder="Location"
+                type="text" autocomplete="off" required="true" value="<%=params[:location]%>" />
+              <input onclick="hideGearTypesDiv()" type="text" id="datefilter" name="datefilter"
+                class="date-filter" placeholder="Pick up - Drop off" value="<%=params[:datefilter]%>" />
+              <div id="gear-field" class="gear-field" onclick="showHideGearTypesDiv()">Gear</div>
+              <div id="gear-types" class="gear-types">
+                <span class="gear-dropdown-icons gear-renters"> Renters</span>
+                <span class="mentors-field">
+                  <button type="button" class="quantity-left-minus btn-default btn-number num-in-dec"
+                    data-type="minus" data-field="">
+                    <i class="material-icons md-20">remove</i>
+                  </button>
+                  <input type="text" id="quantity" name="quantity" class="num-renters"
+                    value="<%=params[:quantity] ? params[:quantity] : 1%>" min="1" max="999" readonly="true">
+                  <button type="button" class="quantity-right-plus btn-default btn-number num-in-dec"
+                    data-type="plus" data-field="">
+                    <i class="material-icons md-20">add</i>
+                  </button>
+                </span>
+                <div class="gear-cat">
+                  <span class="pick-gear-title">Pick gear</span>
+                  <div class="gear-cat-des">
+                    <% Category.all.each do |category|
+                      category_name = category.name %>
+                      <span class="gear-dropdown-icons <%= category_name %>-cat"
+                        onclick="submitSearchForm(<%= category.id %>)">
+                        <%= category_name %>
+                      </span>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+              <input type="hidden" name="category" id="category" />
+              <input type="hidden" name="search_type" id="search_type" value="basic" />
+
+              <input type="hidden" name="ad_price_range" value="<%=params[:ad_price_range]%>" />
+              <input type="hidden" name="price_range" value="<%=params[:price_range]%>" />
+
+              <input type="hidden" name="ad_gear_size" value="<%=params[:ad_gear_size]%>" />
+              <input type="hidden" name="height_from" value="<%=params[:height_from]%>" />
+              <input type="hidden" name="height_to" value="<%=params[:height_to]%>" />
+              <input type="hidden" name="frame_size" value="<%=params[:frame_size]%>" />
+
+              <input type="hidden" name="ad_gear_size" value="<%=params[:ad_gear_size]%>" />
+              <input type="hidden" name="height_from" value="<%=params[:height_from]%>" />
+              <input type="hidden" name="height_to" value="<%=params[:height_to]%>" />
+              <input type="hidden" name="frame_size" value="<%=params[:frame_size]%>" />
+
+              <input type="hidden" name="ad_instant_booking" value="<%=params[:ad_instant_booking]%>" />
+              <input type="hidden" name="instant_booking" value="<%=params[:instant_booking]%>" />
+
+              <input type="hidden" name="ad_gear_type" value="<%=params[:ad_gear_type]%>" />
+              <input type="hidden" name="gear_type_attribute_id" value="<%=params[:gear_type_attribute_id]%>" />
+
+              <input type="hidden" name="accesories_ids" value="<%=params[:accesories_ids]%>" />
+              <input type="hidden" name="rating_id" value="<%=params[:rating_id]%>" />
+              <input type="hidden" name="ad_more_filters" value="<%=params[:ad_more_filters]%>" />
+            <% end %>
+          </div>
+          <%
+            c_path = request.path.split('/').last
+            if c_path == "gears"
+              category = Category.find params[:category]
+              gear_icon = category.img_path %>
+              <script type="text/javascript">
+                var d = document.getElementById("gear-field");
+                d.innerText = "<%= category.name %> + <%=params[:quantity]%>";
+                d.style.backgroundImage = "url(<%= asset_path(gear_icon) %>)";
+                d.style.backgroundSize = "36px";
+                d.style.paddingLeft = "44px";
+              </script>
+            <% end %>
+        <% end %>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse right-header" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a href="#"><%= t("header.lessor")%></a>
+        </li>
+        <li>
+          <%= link_to t("header.help"), contact_path %>
+        </li>
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to t("header.logout"), destroy_user_session_path, method: :delete %>
+          </li>
+        <% else %>
+          <li>
+            <%= link_to t("header.signup"), new_user_registration_path %>
+          </li>
+          <li>
+            <%= link_to t("header.login"), new_user_session_path %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script type="text/javascript">
+  var locationOnChange = false;
+  var cPath = "<%= c_path %>";
+
+  var autocomplete;
+  function initAutocomplete() {
+    autocomplete = new google.maps.places.Autocomplete((document.getElementById('autocomplete')),
+      {types: ['geocode']});
+
+    google.maps.event.addListener(autocomplete, 'place_changed', function() {
+      var place = autocomplete.getPlace();
+      // console.log(place.address_components);
+        submitSearchFormOnFilterValueChanged("<%=params[:category]%>");
+    });
+  }
+
+  $(function() {
+    $('input[name="datefilter"]').daterangepicker({
+      minDate: new Date(Date.now() - 86400000),
+      dateFormat: 'MMMM D, YYYY',
+      autoUpdateInput: false,
+      locale: {
+        cancelLabel: 'Close'
+      }
+    },
+    function() {
+      submitSearchFormOnFilterValueChanged("<%=params[:category]%>");
+    });
+
+    var quantity=1;
+    $('.quantity-right-plus').click(function(e) {
+      e.preventDefault();
+      var quantity = parseInt($('#quantity').val());
+      $('#quantity').val(quantity + 1);
+      submitSearchFormOnFilterValueChanged("<%=params[:category]%>");
+    });
+
+    $('.quantity-left-minus').click(function(e) {
+      e.preventDefault();
+      var quantity = parseInt($('#quantity').val());
+      if(quantity>1){
+        $('#quantity').val(quantity - 1);
+        submitSearchFormOnFilterValueChanged("<%=params[:category]%>");
+      }
+    });
+  });
+
+  function showHideGearTypesDiv() {
+    var x = document.getElementById('gear-types');
+    if (x.style.display === 'block') {
+        x.style.display = 'none';
+    } else {
+        hideAllOthersDiv("gear-types")
+        x.style.display = 'block';
+    }
+  }
+
+  $('html').click(function(e) {
+    var container = $("#gear-types");
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      container.hide();
+    }
+  })
+
+  $('#gear-field').click(function(e){
+    e.stopPropagation();
+  });
+
+  function hideGearTypesDiv() {
+    document.getElementById("gear-types").style.display = 'none';
+  }
+
+  function submitSearchFormOnFilterValueChanged(category) {
+    if(cPath == "gears") {
+      submitSearchForm(category);
+    }
+  }
+
+  function submitSearchForm(category) {
+    var location = document.getElementById("autocomplete");
+    var datefilter = document.getElementById("datefilter");
+    var err = "";
+
+    if(location.value == "") {
+      err = "Please write location\n";
+    }
+    if(datefilter.value == "") {
+      err += "Please select date range";
+    }
+
+    if(err == "") {
+      var d = document.getElementById("category");
+      d.value = category;
+      $("#my-form").submit();
+    } else {
+      alert(err);
+    }
+  }
+</script>

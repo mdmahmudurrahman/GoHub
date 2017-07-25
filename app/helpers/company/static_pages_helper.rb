@@ -1,0 +1,2 @@
+module Company::StaticPagesHelper
+end

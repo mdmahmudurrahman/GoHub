@@ -1,0 +1,659 @@
+<div class="featured-ride-providers">
+  <div class="container">
+
+    <div class="gears-display-top-div">
+      <div class="map-show-btn-div">
+        <span id="map-show-btn" class="map-show-btn" onclick="showMapDiv()">Map</span>
+      </div>
+      <div class="advance-search-filters-div">
+        <!-- INSTANT BOOKING -->
+        <%= form_tag gears_path, method: :get, :id => 'instant-booking-form' do %>
+          <span class="ads-price-range ads-menu-icon" id="ads-price-range"
+            onclick="showHideDiv('ads-price-range-div')">Price range</span>
+          <span class="ads-gear-type ads-menu-icon" id="ads-gear-type"
+            onclick="showHideDiv('ads-gear-type-div')">Gear type</span>
+          <span class="ads-gear-size ads-menu-icon" id="ads-gear-size"
+            onclick="showHideDiv('ads-gear-size-div')">Gear size</span>
+          <span class="ads-more-filters" id="ads-more-filters"
+            onclick="showHideDiv('ads-more-filters-div')">More filters</span>
+
+
+          <span class="ads-instant-booking">Instant booking only</span>
+          <%
+          checked = params[:instant_booking] == "on" ? "checked" : ""
+          %>
+          <label class="switch">
+            <input type="checkbox" name="instant_booking" <%= checked %>
+              onclick="submitPriceInstantBookingOnlyForm()" />
+            <span class="slider round"></span>
+          </label>
+          <input type="hidden" name="ad_instant_booking" value="true" />
+
+          <input type="hidden" name="location" value="<%=params[:location]%>" />
+          <input type="hidden" name="datefilter" value="<%=params[:datefilter]%>" />
+          <input type="hidden" name="category" value="<%=params[:category]%>" />
+          <input type="hidden" name="quantity" value="<%=params[:quantity]%>" />
+
+          <input type="hidden" name="ad_price_range" value="<%=params[:ad_price_range]%>" />
+          <input type="hidden" name="price_range" value="<%=params[:price_range]%>" />
+
+          <input type="hidden" name="ad_gear_size" value="<%=params[:ad_gear_size]%>" />
+          <input type="hidden" name="height_from" value="<%=params[:height_from]%>" />
+          <input type="hidden" name="height_to" value="<%=params[:height_to]%>" />
+          <input type="hidden" name="frame_size" value="<%=params[:frame_size]%>" />
+
+          <input type="hidden" name="ad_gear_type" value="<%=params[:ad_gear_type]%>" />
+          <input type="hidden" name="gear_type_attribute_id" value="<%=params[:gear_type_attribute_id]%>" />
+
+          <input type="hidden" name="accesories_ids" value="<%=params[:accesories_ids]%>" />
+          <input type="hidden" name="rating_id" value="<%=params[:rating_id]%>" />
+          <input type="hidden" name="ad_more_filters" value="<%=params[:ad_more_filters]%>" />
+        <% end %>
+
+        <!-- PRICE RANGE -->
+        <div id="ads-price-range-div" class="ads-price-range-div">
+          <%= form_tag gears_path, method: :get, :id => 'price-range-form' do %>
+            <input type="text" class="price-range-amount" id="amount" readonly value="$10 - $20" />
+            <input type="hidden" name="price_range" id="price-range" value="0-100" readonly />
+            <span class="avg-bike-price-text">The average price of a bike in Copenhagan is $32</span>
+            <div id="slider-range" class="slider-range"></div>
+            <div>
+              <span onclick="hideDiv('ads-price-range-div')" class="cancel-div">Cancel</span>
+              <span onclick="submitPriceRangeSearchForm('ads-price-range-div')" class="apply-div">Apply</span>
+            </div>
+            <input type="hidden" name="ad_price_range" value="true" />
+
+            <input type="hidden" name="location" value="<%=params[:location]%>" />
+            <input type="hidden" name="datefilter" value="<%=params[:datefilter]%>" />
+            <input type="hidden" name="category" value="<%=params[:category]%>" />
+            <input type="hidden" name="quantity" value="<%=params[:quantity]%>" />
+
+            <input type="hidden" name="ad_gear_size" value="<%=params[:ad_gear_size]%>" />
+            <input type="hidden" name="height_from" value="<%=params[:height_from]%>" />
+            <input type="hidden" name="height_to" value="<%=params[:height_to]%>" />
+            <input type="hidden" name="frame_size" value="<%=params[:frame_size]%>" />
+
+            <input type="hidden" name="ad_instant_booking" value="<%=params[:ad_instant_booking]%>" />
+            <input type="hidden" name="instant_booking" value="<%=params[:instant_booking]%>" />
+
+            <input type="hidden" name="ad_gear_type" value="<%=params[:ad_gear_type]%>" />
+            <input type="hidden" name="gear_type_attribute_id" value="<%=params[:gear_type_attribute_id]%>" />
+
+            <input type="hidden" name="accesories_ids" value="<%=params[:accesories_ids]%>" />
+            <input type="hidden" name="rating_id" value="<%=params[:rating_id]%>" />
+            <input type="hidden" name="ad_more_filters" value="<%=params[:ad_more_filters]%>" />
+          <% end %>
+        </div>
+
+        <!-- GEAR TYPE -->
+        <div id="ads-gear-type-div" class="ads-gear-type-div">
+          <%= form_tag gears_path, method: :get, :id => 'gear-type-form' do %>
+            <span class="ads-div-title">Gear type</span>
+            <div class="row">
+              <% Attribute.attributes(params[:category], 0).each do |attribute| %>
+                <div class="col-md-2 ads-gear-type-option"
+                  id="gear-type-<%=attribute.id%>" onclick="gearTypeClick('<%=attribute.id%>')" >
+                  <% bike_img = attribute.img_path ? attribute.img_path : "home_page/intro_image.jpg" %>
+                  <%= image_tag(bike_img, class: "ads-gear-type-option-img") %>
+                  <span class="ads-gear-type-option-name"><%= attribute.name.truncate 11 %></span>
+                </div>
+              <% end %>
+            </div>
+            <div class="row ads-gear-opt-cancel-apply-div">
+              <span onclick="hideDiv('ads-gear-type-div')" class="cancel-div">Cancel</span>
+              <span onclick="submitGearTypeSearchForm('ads-gear-type-div')" class="apply-div">Apply</span>
+            </div>
+            <input type="hidden" name="gear_type_attribute_id" id="gear_type_attribute_id"
+              value="<%=params[:gear_type_attribute_id]%>" />
+            <input type="hidden" name="ad_gear_type" value="true" />
+
+            <input type="hidden" name="location" value="<%=params[:location]%>" />
+            <input type="hidden" name="datefilter" value="<%=params[:datefilter]%>" />
+            <input type="hidden" name="category" value="<%=params[:category]%>" />
+            <input type="hidden" name="quantity" value="<%=params[:quantity]%>" />
+
+            <input type="hidden" name="ad_price_range" value="<%=params[:ad_price_range]%>" />
+            <input type="hidden" name="price_range" value="<%=params[:price_range]%>" />
+
+            <input type="hidden" name="ad_gear_size" value="<%=params[:ad_gear_size]%>" />
+            <input type="hidden" name="height_from" value="<%=params[:height_from]%>" />
+            <input type="hidden" name="height_to" value="<%=params[:height_to]%>" />
+            <input type="hidden" name="frame_size" value="<%=params[:frame_size]%>" />
+
+            <input type="hidden" name="ad_gear_size" value="<%=params[:ad_gear_size]%>" />
+            <input type="hidden" name="height_from" value="<%=params[:height_from]%>" />
+            <input type="hidden" name="height_to" value="<%=params[:height_to]%>" />
+            <input type="hidden" name="frame_size" value="<%=params[:frame_size]%>" />
+
+            <input type="hidden" name="ad_instant_booking" value="<%=params[:ad_instant_booking]%>" />
+            <input type="hidden" name="instant_booking" value="<%=params[:instant_booking]%>" />
+
+            <input type="hidden" name="accesories_ids" value="<%=params[:accesories_ids]%>" />
+            <input type="hidden" name="rating_id" value="<%=params[:rating_id]%>" />
+            <input type="hidden" name="ad_more_filters" value="<%=params[:ad_more_filters]%>" />
+          <% end %>
+        </div>
+        <%
+        gear_type_attribute_id = params[:gear_type_attribute_id]
+        if gear_type_attribute_id != ""
+          gear_type_attribute_id = gear_type_attribute_id.to_i
+          %>
+          <script type="text/javascript">
+            var d = document.getElementById("gear-type-<%= gear_type_attribute_id %>");
+            if(d != null) {
+              d.style.backgroundColor = "#9fc7ef";
+            }
+          </script>
+          <%
+        end
+        %>
+
+        <!-- GEAR SIZE -->
+        <div id="ads-gear-size-div" class="ads-gear-size-div">
+          <%= form_tag gears_path, method: :get, :id => 'gear-size-form' do %>
+            <span class="gear-user-height-desc-text">Tell us your height and we will help you to find the recommended
+              size for your gear</span>
+            <div class="ads-user-height-frame-size-div">
+              <div>
+                <span class="gear-user-height-text">User's height</span>
+                <input class="user-height-from" type="text" name="height_from"
+                  value="<%=params[:height_from]%>" />
+                <input type="text" class="user-height-from-cm-text" value="cm" disabled/>
+                <span class="user-height-separator">-</span>
+                <input class="user-height-to" type="text" name="height_to"
+                  value="<%=params[:height_to]%>" />
+                <input type="text" class="user-height-to-cm-text" value="cm" disabled/>
+              </div>
+              <div class="frame-size-div">
+                <span class="gear-user-height-text">Frame size</span>
+                <input class="frame-size" type="text" name="frame_size"
+                  value="<%=params[:frame_size]%>" />
+              </div>
+            </div>
+            <div class="ads-user-height-frame-size-action-div">
+              <span onclick="hideDiv('ads-gear-size-div')" class="cancel-div">Cancel</span>
+              <span onclick="submitGearSizeSearchForm('ads-gear-size-div')" class="apply-div">Apply</span>
+            </div>
+            <input type="hidden" name="ad_gear_size" value="true" />
+
+            <input type="hidden" name="location" value="<%=params[:location]%>" />
+            <input type="hidden" name="datefilter" value="<%=params[:datefilter]%>" />
+            <input type="hidden" name="category" value="<%=params[:category]%>" />
+            <input type="hidden" name="quantity" value="<%=params[:quantity]%>" />
+
+            <input type="hidden" name="ad_price_range" value="<%=params[:ad_price_range]%>" />
+            <input type="hidden" name="price_range" value="<%=params[:price_range]%>" />
+
+            <input type="hidden" name="ad_instant_booking" value="<%=params[:ad_instant_booking]%>" />
+            <input type="hidden" name="instant_booking" value="<%=params[:instant_booking]%>" />
+
+            <input type="hidden" name="ad_gear_type" value="<%=params[:ad_gear_type]%>" />
+            <input type="hidden" name="gear_type_attribute_id" value="<%=params[:gear_type_attribute_id]%>" />
+
+            <input type="hidden" name="accesories_ids" value="<%=params[:accesories_ids]%>" />
+            <input type="hidden" name="rating_id" value="<%=params[:rating_id]%>" />
+            <input type="hidden" name="ad_more_filters" value="<%=params[:ad_more_filters]%>" />
+          <% end %>
+        </div>
+
+        <!-- Accesories & Rating -->
+        <div id="ads-more-filters-div" class="ads-more-filters-div">
+        <%= form_tag gears_path, method: :get, :id => 'more-filters-form' do %>
+          <span class="ads-div-title">Accesories</span>
+          <div class="row">
+            <% Attribute.attributes(params[:category], 2).each do |attribute| %>
+              <div class="col-md-2 ads-gear-type-option"
+                id="gear-accesories-<%=attribute.id%>" onclick="gearAccesoriesClick('<%=attribute.id%>')" >
+                <% bike_img = attribute.img_path ? attribute.img_path : "home_page/intro_image.jpg" %>
+                <%= image_tag(bike_img, class: "ads-gear-type-option-img") %>
+                <span class="ads-gear-type-option-name"><%= attribute.name.truncate 11 %></span>
+              </div>
+            <% end %>
+          </div>
+          <input type="hidden" name="accesories_ids" id="accesories_ids" value="<%=params[:accesories_ids]%>" />
+          <div class="ads-ads-more-filters-lessor-setting">
+            <span class="ads-div-title">Lessor ratings</span>
+          </div>
+          <div class="ads-ads-more-filters-ratting">
+            <span class="rating ads-ads-more-filters-ratting-padding" id="rating-1" onclick="ratingClick('1')">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            </span>
+            <span class="rating  ads-ads-more-filters-ratting-padding" id="rating-2" onclick="ratingClick('2')">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            </span>
+            <span class="rating  ads-ads-more-filters-ratting-padding" id="rating-3" onclick="ratingClick('3')">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            </span>
+            <span class="rating  ads-ads-more-filters-ratting-padding" id="rating-4" onclick="ratingClick('4')">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            </span>
+            <span class="rating  ads-ads-more-filters-ratting-padding" id="rating-5" onclick="ratingClick('5')">
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              <span><i class="fa fa-star" aria-hidden="true"></i></span>
+            </span>
+          </div>
+          <div class="row ads-gear-opt-cancel-apply-div">
+            <span onclick="hideDiv('ads-gear-type-div')" class="cancel-div">Cancel</span>
+            <span onclick="submitMoreFiltersSearchForm('ads-gear-type-div')" class="apply-div">Apply</span>
+          </div>
+          <input type="hidden" name="rating_id" id="rating_id" value="<%=params[:rating_id]%>" />
+          <input type="hidden" name="ad_more_filters" value="true" />
+
+          <input type="hidden" name="location" value="<%=params[:location]%>" />
+          <input type="hidden" name="datefilter" value="<%=params[:datefilter]%>" />
+          <input type="hidden" name="category" value="<%=params[:category]%>" />
+          <input type="hidden" name="quantity" value="<%=params[:quantity]%>" />
+
+          <input type="hidden" name="ad_price_range" value="<%=params[:ad_price_range]%>" />
+          <input type="hidden" name="price_range" value="<%=params[:price_range]%>" />
+
+          <input type="hidden" name="ad_gear_size" value="<%=params[:ad_gear_size]%>" />
+          <input type="hidden" name="height_from" value="<%=params[:height_from]%>" />
+          <input type="hidden" name="height_to" value="<%=params[:height_to]%>" />
+          <input type="hidden" name="frame_size" value="<%=params[:frame_size]%>" />
+
+          <input type="hidden" name="ad_gear_size" value="<%=params[:ad_gear_size]%>" />
+          <input type="hidden" name="height_from" value="<%=params[:height_from]%>" />
+          <input type="hidden" name="height_to" value="<%=params[:height_to]%>" />
+          <input type="hidden" name="frame_size" value="<%=params[:frame_size]%>" />
+
+          <input type="hidden" name="ad_instant_booking" value="<%=params[:ad_instant_booking]%>" />
+          <input type="hidden" name="instant_booking" value="<%=params[:instant_booking]%>" />
+
+          <input type="hidden" name="ad_gear_type" value="<%=params[:ad_gear_type]%>" />
+          <input type="hidden" name="gear_type_attribute_id" value="<%=params[:gear_type_attribute_id]%>" />
+
+        <% end %>
+        </div>
+        <script type="text/javascript">
+          var selectedAccesories = [];
+        </script>
+        <%
+        accesories_ids = params[:accesories_ids]
+        if accesories_ids != "" && accesories_ids != nil
+          %>
+          <script type="text/javascript">
+            var accesories_ids = "<%= accesories_ids %>";
+            selectedAccesories = accesories_ids.split(',');
+            for(i = 0; i < selectedAccesories.length; i++) {
+              var d = document.getElementById("gear-accesories-" + selectedAccesories[i]);
+              if(d != null) {
+                d.style.backgroundColor = "#9fc7ef";
+              }
+            }
+          </script>
+          <%
+        end
+
+        rating_id = params[:rating_id]
+        if rating_id != ""
+          rating_id = rating_id.to_i
+          %>
+          <script type="text/javascript">
+            var d = document.getElementById("rating-<%= rating_id %>");
+            if(d != null) {
+              d.style.backgroundColor = "#9fc7ef";
+            }
+          </script>
+          <%
+        end
+        %>
+
+      </div>
+    </div>
+
+    <div id="gears-display" class="col-md-8 gears-display-no-padding">
+      <%
+      date_params = params[:datefilter]
+      date_params = date_params.split " - "
+
+      @gears.each do |gear|
+        bike_img = gear.img_path ? gear.img_path : "home_page/intro_image.jpg"
+      %>
+      <div class="col-md-6 wow fadeInDown gear-display-no-padding">
+        <%= image_tag(bike_img, class: "img-responsive bike_img") %>
+        <div class="gear-details">
+          <span class="gear-title">$<%= gear.price_per_day.to_i %> <%= gear.title.truncate 50 %></span>
+          <span class="gear-details">Frame size 190-182 cm</span>
+        </div>
+        <span class="rating">
+          <span><i class="fa fa-star" aria-hidden="true"></i></span>
+          <span><i class="fa fa-star" aria-hidden="true"></i></span>
+          <span><i class="fa fa-star" aria-hidden="true"></i></span>
+          <span><i class="fa fa-star" aria-hidden="true"></i></span>
+          <span><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
+        </span>
+        <span>(<%= gear.shop.average_rating %>)</span>
+        <span class="gear-reviews"><%= gear.shop.reviews.count %> Reviews</span>
+      </div>
+      <% end %>
+    </div>
+    <div class="col-md-4 gears-display-no-padding">
+      <div class="map-button-div" id="map-button-div">
+        <button id="map-close-btn" class="btn-default map-close-btn" onclick="hideMapDiv()">CLOSE</button>
+      </div>
+      <div id="dvMap" class="dv-map"></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBArxTME6txFlxQd-X0AaYuJWEiEuCWB94" type="text/javascript"></script> -->
+
+
+<script type="text/javascript">
+  $( function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 100,
+      values: [ <%= @price_from_param_value %>, <%= @price_to_param_value %> ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+        $( "#price-range" ).val( ui.values[ 0 ] + "-" + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+  } );
+
+
+  var markers = [];
+  markers =  <%= raw @lat_long.to_json %>;
+
+  window.onload = function () {
+    var mapOptions = {
+      center: {lat: -34.397, lng: 150.644},
+      zoom: 8
+      // mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    var map = new google.maps.Map(document.getElementById("dvMap"), mapOptions);
+    var infoWindow = new google.maps.InfoWindow();
+    var lat_lng = new Array();
+    var latlngbounds = new google.maps.LatLngBounds();
+
+    if(markers != null) {
+      for (i = 0; i < markers.length; i++) {
+        var data = markers[i]
+        var myLatlng = new google.maps.LatLng(data.lat, data.lng);
+        lat_lng.push(myLatlng);
+        var marker = new google.maps.Marker({
+          position: myLatlng,
+          map: map,
+          title: data.title
+        });
+        latlngbounds.extend(marker.position);
+        (function (marker, data) {
+          google.maps.event.addListener(marker, "click", function (e) {
+          infoWindow.setContent(data.description);
+          infoWindow.open(map, marker);
+          });
+        })(marker, data);
+      }
+    }
+    map.setCenter(latlngbounds.getCenter());
+    map.fitBounds(latlngbounds);
+  }
+
+  function hideMapDiv() {
+    document.getElementById('dvMap').style.display = 'none';
+    document.getElementById('map-button-div').style.display = 'none';
+
+    document.getElementById('map-show-btn').style.display = 'block';
+    document.getElementById("gears-display").className = "col-md-12 gears-display-no-padding";
+
+    var bikeImg = document.getElementsByClassName("img-responsive bike_img");
+    for(var i = 0; i < bikeImg.length; i++) {
+      bikeImg[i].className = "img-responsive bike_img bike_img-big";
+    }
+  }
+
+  function showMapDiv() {
+    document.getElementById('dvMap').style.display = 'block';
+    document.getElementById('map-button-div').style.display = 'block';
+
+    document.getElementById('map-show-btn').style.display = 'none';
+    document.getElementById("gears-display").className = "col-md-8 gears-display-no-padding";
+
+    var bikeImg = document.getElementsByClassName("img-responsive bike_img");
+    for(var i = 0; i < bikeImg.length; i++) {
+      bikeImg[i].className = "img-responsive bike_img";
+    }
+  }
+
+  function showHideDiv(divName) {
+    hideAllOthersDiv(divName)
+
+    var x = document.getElementById(divName);
+    if (x.style.display === 'block') {
+        x.style.display = 'none';
+    } else {
+        x.style.display = 'block';
+    }
+  }
+
+  $('html').click(function(e) {
+    var container = $("#ads-price-range-div");
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      container.hide();
+    }
+
+    var container2 = $("#ads-gear-size-div");
+    if (!container2.is(e.target) && container2.has(e.target).length === 0) {
+      container2.hide();
+    }
+
+    var container3 = $("#ads-gear-type-div");
+    if (!container3.is(e.target) && container3.has(e.target).length === 0) {
+      container3.hide();
+    }
+
+    var container4 = $("#ads-more-filters-div");
+    if (!container4.is(e.target) && container4.has(e.target).length === 0) {
+      container4.hide();
+    }
+  })
+
+  $('#ads-price-range').click(function(e) {
+    e.stopPropagation();
+  });
+
+  $('#ads-gear-size').click(function(e) {
+    e.stopPropagation();
+  });
+
+  $('#ads-gear-type').click(function(e) {
+    e.stopPropagation();
+  });
+
+  $('#ads-more-filters').click(function(e) {
+    e.stopPropagation();
+  });
+
+  function hideDiv(divName) {
+    document.getElementById(divName).style.display = 'none';
+  }
+
+  function submitPriceRangeSearchForm(divName) {
+    // var location = document.getElementById("autocomplete");
+    // var datefilter = document.getElementById("datefilter");
+    hideDiv(divName)
+    var err = "";
+
+    // if(location.value == "") {
+    //   err = "Please write location\n";
+    // }
+    // if(datefilter.value == "") {
+    //   err += "Please select date range";
+    // }
+
+    if(err == "") {
+      // var d = document.getElementById("category");
+      // d.value = category;
+      $("#price-range-form").submit();
+    } else {
+      alert(err);
+    }
+  }
+
+  function submitGearSizeSearchForm(divName) {
+    // var location = document.getElementById("autocomplete");
+    // var datefilter = document.getElementById("datefilter");
+    hideDiv(divName)
+    var err = "";
+
+    // if(location.value == "") {
+    //   err = "Please write location\n";
+    // }
+    // if(datefilter.value == "") {
+    //   err += "Please select date range";
+    // }
+
+    if(err == "") {
+      // var d = document.getElementById("category");
+      // d.value = category;
+      $("#gear-size-form").submit();
+    } else {
+      alert(err);
+    }
+  }
+
+  function submitPriceInstantBookingOnlyForm() {
+    // var location = document.getElementById("autocomplete");
+    // var datefilter = document.getElementById("datefilter");
+    var err = "";
+
+    // if(location.value == "") {
+    //   err = "Please write location\n";
+    // }
+    // if(datefilter.value == "") {
+    //   err += "Please select date range";
+    // }
+
+    if(err == "") {
+      // var d = document.getElementById("category");
+      // d.value = category;
+      $("#instant-booking-form").submit();
+    } else {
+      alert(err);
+    }
+  }
+
+  var lastSelected2 = "<%= gear_type_attribute_id %>";
+  var lastSelected = "<%= gear_type_attribute_id %>";
+  function gearTypeClick(id) {
+    var d1 = document.getElementById('gear-type-'+lastSelected);
+    if(d1 != null) {
+      d1.style.backgroundColor = "white";
+    }
+
+    var d = document.getElementById('gear-type-'+id);
+    if(id == lastSelected) {
+      d.style.backgroundColor = "white";
+      lastSelected = null;
+    } else {
+      d.style.backgroundColor = "#9fc7ef";
+      lastSelected = id;
+    }
+  }
+
+  function submitGearTypeSearchForm(divName) {
+    // var location = document.getElementById("autocomplete");
+    // var datefilter = document.getElementById("datefilter");
+    hideDiv(divName)
+    var err = "";
+
+    // if(location.value == "") {
+    //   err = "Please write location\n";
+    // }
+    // if(datefilter.value == "") {
+    //   err += "Please select date range";
+    // }
+
+    if(err == "" && (lastSelected > 0 || lastSelected2 > 0)) {
+      var d = document.getElementById("gear_type_attribute_id");
+      d.value = lastSelected;
+      $("#gear-type-form").submit();
+    } else {
+      // alert(err);
+    }
+  }
+
+  var selectedAccesories2 = "<%= accesories_ids %>";
+  // var selectedAccesories = [];
+  function gearAccesoriesClick(id) {
+    // var d1 = document.getElementById('gear-accesories-'+selectedAccesories);
+    // if(d1 != null) {
+    //   d1.style.backgroundColor = "white";
+    // }
+
+    var d = document.getElementById('gear-accesories-'+id);
+    if(selectedAccesories.includes(id)) {
+      d.style.backgroundColor = "white";
+      var index = selectedAccesories.indexOf(id);
+      selectedAccesories.splice(index, 1);
+    }
+    else {
+      d.style.backgroundColor = "#9fc7ef";
+      selectedAccesories.push(id);
+    }
+  }
+
+  var lastSelectedRating2 = "<%= rating_id %>";
+  var lastSelectedRating = "<%= rating_id %>";
+  function ratingClick(id) {
+    var d1 = document.getElementById('rating-'+lastSelectedRating);
+    if(d1 != null) {
+      d1.style.backgroundColor = "white";
+    }
+
+    var d = document.getElementById('rating-'+id);
+    if(id == lastSelectedRating) {
+      d.style.backgroundColor = "white";
+      lastSelectedRating = null;
+    } else {
+      d.style.backgroundColor = "#9fc7ef";
+      lastSelectedRating = id;
+    }
+  }
+
+  function submitMoreFiltersSearchForm(divName) {
+    // var location = document.getElementById("autocomplete");
+    // var datefilter = document.getElementById("datefilter");
+    hideDiv(divName)
+    var err = "";
+
+    // if(location.value == "") {
+    //   err = "Please write location\n";
+    // }
+    // if(datefilter.value == "") {
+    //   err += "Please select date range";
+    // }
+
+    if((selectedAccesories != "" || selectedAccesories2 != "") || (lastSelectedRating > 0 || lastSelectedRating2 > 0)) {
+      var d1 = document.getElementById("accesories_ids");
+      d1.value = selectedAccesories;
+      // console.log(selectedAccesories);
+
+      var d = document.getElementById("rating_id");
+      d.value = lastSelectedRating;
+      $("#more-filters-form").submit();
+    } else {
+      // alert(err);
+    }
+  }
+
+
+
+</script>
+

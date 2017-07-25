@@ -1,0 +1,383 @@
+// Place all the styles related to the Gears controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.dv-map {
+  width: 390px;
+  height: 666px;
+}
+
+.gears-display-no-padding {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.gear-display-no-padding {
+  padding-left: 0px !important;
+}
+
+.gear-details span {
+  display: block;
+}
+
+.gear-title {
+  padding-top: 5px;
+  font-size: 16px;
+  color: #636363;
+  font-weight: 700;
+}
+
+.gear-details {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.gear-reviews {
+  font-size: 13px;
+}
+
+.map-button-div {
+  position: absolute;
+  z-index: 5;
+  top: 10px;
+  right: -2%;
+}
+
+.map-close-btn {
+  border: none;
+  width: 100px;
+  height: 35px;
+  background-image: url("gears/close.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px;
+}
+
+.map-show-btn {
+  z-index: 5;
+  color: #636363;
+  font-size: 16px;
+  display: none;
+  background-image: url("gears/map.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 25px;
+  padding-left: 32px;
+  cursor: pointer;
+}
+
+.bike_img {
+  height: 215px !important;
+  width: 365px !important;
+}
+
+.bike_img-big {
+  height: 332px !important;
+  width: 555px !important;
+}
+
+
+
+.gears-display-top-div {
+
+}
+
+.map-show-btn-div {
+  float: right;
+}
+
+.advance-search-filters-div {
+  color: #636363;
+}
+
+.ads-price-range {
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.ads-gear-type {
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.ads-gear-size {
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.ads-more-filters {
+  margin-right: 25px;
+  cursor: pointer;
+}
+
+.ads-instant-booking {
+  margin-left: 45px;
+}
+
+.ads-menu-icon {
+  background-image: url("header/arrow_down_black.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 20px;
+  padding-right: 25px;
+}
+
+.ads-more-filters {
+  background-image: url("header/more_filters.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px;
+  padding-left: 25px;
+}
+
+
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 10px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 2px;
+  left: 0px;
+  right: 0;
+  bottom: -9px;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: -4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border: 1px solid #cccccc;
+}
+
+input:checked + .slider {
+  background-color: #00e863;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #00e863;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+
+.ads-price-range-div {
+  width: 420px;
+  height: 270px;
+  padding: 30px 25px;
+  background-color: white;
+  display: none;
+  position: absolute;
+  border: 2px solid #eeeeee;
+  /* margin-left: 364px; */
+  font-weight: 500;
+  font-size: 20px;
+  z-index: 10;
+  margin-top: 10px;
+}
+
+.ads-gear-size-div {
+  width: 499px;
+  height: 340px;
+  padding: 30px 25px;
+  background-color: white;
+  display: none;
+  position: absolute;
+  border: 2px solid #eeeeee;
+  margin-left: 247px;
+  font-weight: 500;
+  font-size: 20px;
+  z-index: 10;
+  margin-top: 10px;
+}
+
+.ads-gear-type-div {
+  width: 745px;
+  height: 600px;
+  padding: 30px 25px;
+  background-color: white;
+  display: none;
+  position: absolute;
+  border: 2px solid #eeeeee;
+  /* margin-left: 364px; */
+  font-weight: 500;
+  font-size: 20px;
+  z-index: 10;
+  margin-top: 10px;
+  overflow: auto;
+}
+
+.ads-more-filters-div {
+  width: 745px;
+  height: 600px;
+  padding: 30px 25px;
+  background-color: white;
+  display: none;
+  position: absolute;
+  border: 2px solid #eeeeee;
+  /* margin-left: 364px; */
+  font-weight: 500;
+  font-size: 20px;
+  z-index: 10;
+  margin-top: 10px;
+  overflow: auto;
+}
+
+.price-range-amount {
+  border: 0;
+  font-size: 30px;
+  color: #7b7777;
+}
+
+.slider-range {
+  margin: 40px 13px;
+}
+
+.apply-div {
+  float: right;
+  cursor: pointer;
+}
+
+.cancel-div {
+  cursor: pointer;
+}
+
+.avg-bike-price-text {
+  font-size: 14px;
+}
+
+.gear-user-height-desc-text {
+  font-size: 18px;
+}
+
+.gear-user-height-text {
+  font-size: 16px;
+}
+
+.ads-user-height-frame-size-div {
+  margin: 30px 0px;
+}
+
+.user-height-from {
+  width: 135px;
+  height: 45px;
+  margin-left: 48px;
+  text-align: center;
+}
+
+.user-height-to {
+  width: 132px;
+  height: 45px;
+  margin-left: 5px;
+  text-align: center;
+}
+
+.user-height-separator {
+  margin-left: 12px;
+}
+
+.frame-size-div {
+  margin-top: 25px;
+}
+
+.frame-size {
+  width: 293px;
+  height: 45px;
+  margin-left: 62px;
+}
+
+.ads-user-height-frame-size-action-div {
+  padding-top: 8px;
+}
+
+.user-height-from-cm-text {
+  background: white;
+  width: 30px;
+  border: none;
+  margin-left: -45px;
+}
+
+.user-height-to-cm-text {
+  background: white;
+  width: 37px;
+  border: none;
+  margin-left: -48px;
+}
+
+.ads-div-title {
+  font-weight: 600;
+}
+
+
+.ads-itam-name {
+
+}
+
+
+
+.ads-gear-type-option {
+  text-align: center;
+  cursor: pointer;
+}
+
+
+.ads-gear-type-option-img {
+  height: 85px;
+  width: 85px;
+}
+
+
+.ads-gear-type-option-name {
+  font-size: 16px;
+}
+
+
+.ads-gear-opt-cancel-apply-div {
+  margin: 40px 0px !important;
+}
+
+
+.ads-ads-more-filters-lessor-setting {
+  margin-top: 42px;
+}
+
+.ads-ads-more-filters-ratting {
+  margin-top: 15px;
+}
+
+.ads-ads-more-filters-ratting-padding {
+  margin-right: 45px;
+  cursor: pointer;
+}
