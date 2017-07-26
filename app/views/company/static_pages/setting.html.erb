@@ -1,0 +1,47 @@
+<div class="container company-settings">
+  <div class="page-header">
+    <h3>Welcome to gohub!<br/>
+    <small>Some text what to do.</small></h3>
+  </div>
+  <div class="col-md-6">
+    <div class="list-group">
+      <p>
+        <%= link_to company_path(current_user), class: "list-group-item" do %>
+          <span class="glyphicon glyphicon-cog btn btn-info btn-xs"></span>
+          Update your profile information
+        <% end %>
+      </p>
+      <p>
+        <%= link_to "#", class: "list-group-item" do %>
+          <span class="glyphicon glyphicon-cog btn btn-info btn-xs"></span>
+          Set your shops
+        <% end %>
+      </p>
+      <p>
+        <a href="#" class="list-group-item">
+          <span class="glyphicon glyphicon-cog btn btn-info btn-xs"></span>
+          Find setting your profile
+        </a>
+      </p>
+      <p>
+        <a href="#" class="list-group-item">
+          <span class="glyphicon glyphicon-list-alt btn btn-info btn-xs"></span>
+          List your gear
+        </a>
+      </p>
+      <p>
+        <a href="#" class="list-group-item">
+          <span class="glyphicon glyphicon-dashboard btn btn-info btn-xs"></span>
+          View your dashboard
+        </a>
+      </p>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <div class="w3-panel w3-note">
+      <p class="">
+        Finish your profile, so we can have all your data...
+      </p>
+    </div>
+  </div>
+</div>
