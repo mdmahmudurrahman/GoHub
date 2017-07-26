@@ -1,0 +1,216 @@
+/*flash*/
+.flash-notification {
+  padding-top: 8%;
+}
+
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  padding: 0 20px;
+  text-align: left;
+  li:first-child {
+    padding-top: 20px;
+  }
+  li:last-child {
+    padding-bottom: 0px;
+  }
+}
+
+.alert-alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+.alert-success {
+  background-color: #5cb85c;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
+.alert-notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
+.style_none {
+  list-style-type: none;
+}
+
+/*===========================
+  Gear search field
+============================ */
+
+.location {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  outline: 0;
+  padding: 8px;
+  padding-left: 30px;
+  width: 320px;
+  font-size: 16px;
+  background-image: url("header/search_black.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+ul.ui-autocomplete {
+  color: red !important;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+}
+
+.logo {
+  height: 100px;
+}
+
+.search-field {
+  float: right;
+  margin-top: 35px;
+  font-weight: 600;
+}
+
+.date-filter {
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  outline: 0;
+  padding: 8px;
+  padding-left: 30px;
+  width: 216px;
+  font-size: 16px;
+  background-image: url("header/date_range.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  cursor: pointer;
+}
+
+.right-header {
+  margin-top: 30px;
+}
+
+.gear-field {
+  border-bottom: 2px solid #eeeeee;
+  background-image: url("header/gear.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 20px;
+  padding: 8px;
+  padding-left: 30px;
+  float: right;
+  margin-left: 5px;
+  width: 182px;
+  cursor: pointer;
+}
+
+.gear-types {
+  width: 364px;
+  height: 550px;
+  padding: 50px 30px;
+  background-color: white;
+  display: none;
+  position: absolute;
+  border: 2px solid #eeeeee;
+  margin-left: 364px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.gear-dropdown-icons {
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-left: 75px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.gear-renters {
+  background-image: url("header/identity.png");
+  background-size: 50px;
+}
+
+.num-in-dec {
+  border: 1px solid gray !important;
+  border-radius: 20px !important;
+  outline: 0;
+  height: 36px;
+  width: 36px;
+}
+
+.num-renters {
+  width: 40px;
+  text-align: center;
+  border: none;
+  outline: 0;
+}
+
+.num-in-dec:focus {
+  outline: none;
+}
+
+.num-plus {
+  padding-left: 7px;
+}
+
+.mentors-field {
+  margin-left: 20px;
+}
+
+.gear-cat {
+  margin-top: 50px;
+}
+
+.pick-gear-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.gear-cat-des {
+  margin-top: 30px;
+}
+
+.gear-cat-des span {
+  display: block;
+  margin-bottom: 40px;
+}
+
+.Bike-cat {
+  background-image: url("category/Bike.png");
+  background-size: 65px;
+  cursor: pointer;
+}
+
+.Skiboard-cat {
+  background-image: url("category/Skiboard.png");
+  background-size: 46px;
+  margin-left: 10px;
+  padding-left: 65px !important;
+  cursor: pointer;
+}
+
+.Snowboard-cat {
+  background-image: url("category/Snowboard.png");
+  background-size: 46px;
+  margin-left: 10px;
+  padding-left: 65px !important;
+  cursor: pointer;
+}
+
+.Surfboard-cat {
+  background-image: url("category/Surfboard.png");
+  background-size: 46px;
+  margin-left: 10px;
+  padding-left: 65px !important;
+  cursor: pointer;
+}
+
+.bike_img {
+  height: 215px !important;
+  width: 365px !important;
+}
